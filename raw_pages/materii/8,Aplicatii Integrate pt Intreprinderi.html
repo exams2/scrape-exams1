@@ -1,0 +1,70 @@
+
+<div style="float:left" id="list"><label for='page-title' class='page-text'>Aplicatii Integrate pt Intreprinderi</label>
+	<div style="clear:both"></div>		<div id="wrapper736" class="wrapper">
+		<div class="box" id="box736" onclick="togglePopBox('736')">
+                <span class="prof"><b> profesor:</b> </span> mihai ionescu <br/>
+                <span class="materie"><b> materie: </b></span> Aplicatii Integrate pt Intreprinderi <br/>
+                <span class="data"><b>data:</b></span> 2016-02-03<br/>
+                <span class="details"> 2016 Prima sesiune</span>
+                <span class="details"> C4 341</span>
+                <div class="tic" id="tic736" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=736" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('736')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('736')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper775" class="wrapper">
+		<div class="box" id="box775" onclick="togglePopBox('775')">
+                <span class="prof"><b> profesor:</b> </span> Mihai Ionescu <br/>
+                <span class="materie"><b> materie: </b></span> Aplicatii Integrate pt Intreprinderi <br/>
+                <span class="data"><b>data:</b></span> 2016-06-07<br/>
+                <span class="details"> 2016 Sesiunea de restante</span>
+                <span class="details"> C4 </span>
+                <div class="tic" id="tic775" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=775" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('775')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('775')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper444" class="wrapper">
+		<div class="box" id="box444" onclick="togglePopBox('444')">
+                <span class="prof"><b> profesor:</b> </span> Mihai Ionescu <br/>
+                <span class="materie"><b> materie: </b></span> Aplicatii Integrate pt Intreprinderi <br/>
+                <span class="data"><b>data:</b></span> 2014-01-29<br/>
+                <span class="details"> 2014 Prima sesiune</span>
+                <span class="details"> C4 341</span>
+                <div class="tic" id="tic444" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=444" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('444')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('444')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+		<script type="text/javascript">
+	$(document).ready(function() {
+	$('.box').hover(function(){
+				$(this).children('.tic').css({'background-position':'0px -231px'});
+				$(this).children('.buttonHolder').show();
+				$(this).children('.buttonHolder').children('.show').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.clone').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.cloneClose').click(function(e){e.stopPropagation();});
+				},function(){
+				$(this).children('.buttonHolder').hide();
+				$(this).children('.tic').css({'background-position':'0px -198px'});
+				});
+	});
+		$('.show').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.clone').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.cloneClose').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.box').hover(function(){$(this).css({'opacity':'0.8'});},function(){$(this).css({'opacity':'1'});});
+	</script>
+
+

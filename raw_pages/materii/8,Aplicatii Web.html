@@ -1,0 +1,70 @@
+
+<div style="float:left" id="list"><label for='page-title' class='page-text'>Aplicatii Web</label>
+	<div style="clear:both"></div>		<div id="wrapper456" class="wrapper">
+		<div class="box" id="box456" onclick="togglePopBox('456')">
+                <span class="prof"><b> profesor:</b> </span> magdalena anghel <br/>
+                <span class="materie"><b> materie: </b></span> Aplicatii Web <br/>
+                <span class="data"><b>data:</b></span> 2014-02-01<br/>
+                <span class="details"> 2014 Prima sesiune</span>
+                <span class="details"> AA 331</span>
+                <div class="tic" id="tic456" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=456" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('456')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('456')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper450" class="wrapper">
+		<div class="box" id="box450" onclick="togglePopBox('450')">
+                <span class="prof"><b> profesor:</b> </span> magdalena anghel <br/>
+                <span class="materie"><b> materie: </b></span> Aplicatii Web <br/>
+                <span class="data"><b>data:</b></span> 2014-01-31<br/>
+                <span class="details"> 2013 Partial</span>
+                <span class="details"> AA 331</span>
+                <div class="tic" id="tic450" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=450" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('450')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('450')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper383" class="wrapper">
+		<div class="box" id="box383" onclick="togglePopBox('383')">
+                <span class="prof"><b> profesor:</b> </span> Magdalena Anghel <br/>
+                <span class="materie"><b> materie: </b></span> Aplicatii Web <br/>
+                <span class="data"><b>data:</b></span> 2013-02-04<br/>
+                <span class="details"> 2013 Prima sesiune</span>
+                <span class="details"> AB </span>
+                <div class="tic" id="tic383" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=383" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('383')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('383')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+		<script type="text/javascript">
+	$(document).ready(function() {
+	$('.box').hover(function(){
+				$(this).children('.tic').css({'background-position':'0px -231px'});
+				$(this).children('.buttonHolder').show();
+				$(this).children('.buttonHolder').children('.show').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.clone').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.cloneClose').click(function(e){e.stopPropagation();});
+				},function(){
+				$(this).children('.buttonHolder').hide();
+				$(this).children('.tic').css({'background-position':'0px -198px'});
+				});
+	});
+		$('.show').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.clone').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.cloneClose').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.box').hover(function(){$(this).css({'opacity':'0.8'});},function(){$(this).css({'opacity':'1'});});
+	</script>
+
+

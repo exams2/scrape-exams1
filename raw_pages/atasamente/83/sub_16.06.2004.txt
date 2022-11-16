@@ -1,0 +1,471 @@
+Buna!
+Reproduc mesajul Ioanei (careia ii multumesc ) si
+incercati si voi sa retineti din subiecte :)
+
+Buna,
+Examenul de pf nu a fost foarte greu, dar cu capcane
+evident :D
+Trebuie sa intelegeti f bine call/cc-uri, delay/force,
+lambda ()... pentru ca da chestii incurcate cu astea.
+Ii mai place sa dea din alea cu grafuri (care pana la
+urma se reduc la intelegerea delay/force si lamda())
+si trebuie sa fiti f atente la astea.
+
+Eu nu am avut timp sa imi notez grilele, doar cateva
+le-am scris pe ciorna si o sa vi le scriu aici
+impreuna cu ce imi mai amintesc :
+- ((\x.\y.(y x) y) \x.x) care e forma normala (e y)  [
+\ = lambda ]
+- f=\x.\y.(x y) g=\x.x ce e adevarat : f se reduce
+beta la g, f se reduce alfa la g, f se reduce eta la g
+(asta era evident), nu e nici o relatie intre ele
+- care e signatura functiei fun x y -> x(y)()
+- ceva de genul
+exception A;;
+exception B of exn->exn;;
+x = try try raise(B (fun x->x)) with B(f)->raise (f A)
+with z->z;; (nu stiu sigur daca am scris corect)
+ideea era ca x=A
+- ce se intelegi prin evaluare lenesa
+- daca aveai multimea functiilor T={f:alfa->T} cum se
+scrie in caml
+si era type 'a T = F of 'a-> 'a T
+- o functie pow (mi se pare ca e si in pdf-uri, oricum
+aici era scrisa normal, adica in genul ca
+pow(E,n) = E*pow(E,n-1)) si te intreba de cate ori se
+evalueaza E daca transmisia parametrilor se face prin
+nume (se evalua de n ori)
+- functia compose si intreba ce rezulta din ((compose
+compose) (compose f)) => f^8
+- cum arata combinatorul de punct fix pt fct rcs unare
+in caml si era
+let rec F = fun f x -> f (F f) x
+- care e signatura functiei (cea mai de jos)
+let id = (fun x->x) (fun x->x)
+fun x->id (fun x->x) si era 'a->'_b->'_b (atentie la
+cele de genul asta si la polimorfism slab/tare)
+- daca am functia (define f (lambda(x) (let ((x
+(lambda() x))) lambda() x)))) cum trebuie apelata ca
+sa obtii 1 -> (((f 1)))
+- parca asa ceva (nu mai sunt sigura, oricum ceva f
+similar cu asta) :
+(let ((x (call/cc (lambda(cont) (+0 (cont cont) 1)))))
+(if (procedure? x) (x (x 2) x) x)) ce intoarce ?
+intoarce 2
+- cel mai naspa subiect :
+let f x =
+   let rec f cont n =
+       if n<2 then cont 1
+       else f (fun x-> f (fun y-> cont (x+y)) (n-2))
+(n-1)
+   in f (fun x->x) x;;
+Chestia asta este fibonacci scris in caml cu
+continuari!!!! eu nu m-as fi prins ce face din modul
+in care e scrisa si m-am apucat si am calculat pt
+cateva n-uri :D. Intre raspunsuri era
+    f(n)=f(n-1)+f(n-2) dar signatura nu poate fi
+sintetizata
+    f(n)=f(n-1)+f(n-2) (asta era)
+    f(n) = alte formule aiuristice
+- ce calculeaza in Haskell : f() = () : f() raspuns:
+[(),(),...] lista infinita de tupluri vide
+- trebuia sa scrii in haskell folosinf list
+comprehension urmatoare multime (trebuia sa scrii tu
+codul - eu am gresit la asta :( )
+M={orice x din N1, y din N1| even(x)^odd(y)^y<x ..
+(x,y)} prin N1 am vazut ca intelegea [1..], eu am
+scris N1 ca nu stiam la ce se refera
+- una cu grafuri :
+(define G (letrec ((a (lambda() (cons 'a b)))
+                         (b (cons 'b (delay (a)))))
+              (a)))
+(define next (lambda(G) (if (promise? (cdr G)) (force
+(cdr G)) (cdr G))))
+si intreba cum arata graful. Raspunsul corect era :
+a-->b-->a
+       ^    |
+       |----|
+(3 noduri si de la al treilea legatura la al doilea)
+La probleme de genul asta mare atentie la cand este
+vorba de acelasi obiect si cand e vorba de obiecte
+similare dar diferite!
+-o chestie cu fluxuri in scheme
+unde flux era definit ceva de genul flux (lambda (f x
+a) (cons a (delay (flux f (f x) (cons x a))
+si se apela (flux (lambda(x) (+ 1 x)) 0 '()) si sa
+zici ce fluz rezulta.
+Rezultatul era () (0) (1 0) (2 1 0) .....
+- (define ff
+   (let ((x 0)
+         (cons (lambda() (force (delay (set! x (+1
+x)))) x) (lambda() x))))
+si ce intoarce ((car ff)) ((cdr ff)) ((car ff)) ((cdr
+ff)) ((car ff)) ((cdr ff))
+Raspunsuri posibile 1 1 1 1 1 1 si  1 1 2 2 3 3 si
+inca 2. Oricum atentie ca aici era capcana mare, multi
+au gresit. Corect era 1 1 2 2 3 3
+- mai era una cu o clasa in Haskell si trebuia sa zici
+ce rezulta oricum nu era prea complicata
+- una de sinteza de tip in Haskell - trebuia sa te
+prinzi cum se simplifica contextul (era f similar cu
+exemplul din curs).
+---------------------------------
+
+Intrebari presupuse sigure:
+1 call/cc imbricate
+2 exceptii:
+  2.1. raise - ce intoarce? un tip polimorfic tare pentru evaluarea signaturii
+  2.2. un bloc try catch raise ce intoarce? nimic
+3. grafuri - ce-i in curs - se da un cod de trei randuri - ce graf se genereaza?
+4. variabile - moduri de transfer
+5. variabila inchisa in 2 inchideri se modifica intr-una (cu set!). se modif si in cealalta? DA
+6. sinteza de tipuri
+7. sharing (habar n-am ce-i aia)
+8. q: ce inseamna transparenta referentiala?
+9. functii curry/uncurry
+10. functie stricta/nestricta
+11. var. libera/legata
+12. evaluare lazy/...
+---------------------------------
+
+1. Functia (lambda (x) (lambda (y)(cons x y))) are
+forma:
+a) forma e decisa de modul de reducere al functiei
+b) ambele forme curry si uncurry pentru ca este binara
+c) forma uncurry
+d) forma curry
+
+2. Fie E=((lx.ly.(y x) y) lx.x)  => l=lambda
+Care afirmatie din cele de mai jos este corecta?
+a) forma normala a lui E este (y x)
+b) forma normala a lui E este lx.x
+c) forma normala a lui E este y
+d) expresia E este in forma normala
+
+3. Fie expresiile:
+  A=lx.ly.(x y)
+  B=lx.x
+Care este afirmatia corecta?
+a) A nu este echivalenta computational cu B
+b) A este echivalenta computational cu B
+c) B este forma normala a lui A
+d) A este echivalenta structural cu B
+
+4. Se presupune ca functia C de mai jos e nestricta.
+Care e rezultatul
+intors de f(1, f(0,0/0))?
+
+f(int x, int y){ return x? y:x;}
+
+a) rezultatul deepinde de implementare
+b) 1
+c) 0
+d) eroare
+
+9. Fie programul in Scheme. Care e valoarea aplicatiei
+(g 2)?
+
+  (define f(lambda(x) (lambda(y) (lista x y))))
+  (define g(lambda(x) (f x)))
+   (g 2)
+
+a) (2 #<procedure>)
+b) #procedure
+c) (1 2)
+d) eroare
+
+10. Fie graful G construit astfel:
+
+(define G (letrec ((a (lambda() (cons 'a (delay a)))))
+(a)))
+
+(define next (lambda(G) ((force (cdr G)))))
+
+Cum arata G?
+
+a) b) c) d) aici erau diverse versiuni de grafuri
+
+
+
+11. Fie graful G:
+
+  (define legare
+
+  (lambda (constructie)
+
+  (letrec ((loc (constrtuctie (lambda() loc)))) loc)))
+
+  (define G (legare (lambda (loc) (cons 'a loc))))
+
+  Ce intoarce testul (eq? G ((cdr G))) ?
+
+a) eroare
+
+b) evaluarea nu se terimina pt. ca G e ciclic
+
+c) #t
+
+d) #f
+
+
+
+12. Ce valoare are expresia:
+
+(let ((x (call/cc (lambda c1)
+
+   (+ 1 (call/cc (lambda (c2) (c1 c2)))) 1))))
+
+(if (procedure? x) (x 1) x)
+
+a) evaluarea nu se termina
+
+b) 1
+
+c) 2
+
+d) 3
+
+
+
+13. Fie definitia:
+
+(define ff
+
+  ((lambda(x)
+
+    (let ((d (delay (set! x (- x 1)))))
+
+     (cons (lambda() x)
+
+    (lambda() (force d) x))))
+
+   2))
+
+Ce valori sunt intoarse de:
+
+((car ff)) ((cdr ff)) ((car ff)) ((cdr ff)) ((car ff))
+((cdr ff))
+
+a) 2 1 1 1 1 1
+
+b) 2 1 2 1 2 1
+
+c) 2 2 2 2 2 2
+
+d) eroare: parametrul x nu exista in momentul
+evaluarii expresiilor din
+secventa
+
+
+
+14. Care este signatura functiei: fun x y -> x (y) ()
+?
+
+a) 'a->'b->unit->'c
+
+b) 'a->'b->unit
+
+c) ('a->unit->'b)->'a->'b
+
+d) signatura imposibila
+
+
+
+15. Care e signatura functiei:
+
+fun f -> let f=(fun f->f) in ((f f) f)?
+
+a) 'a->'b->'b
+
+b) 'a->'a
+
+c) signatura imposibila
+
+d) '_a->'_a
+
+
+
+16. Functia plus este varianta textual nerecursiva
+pentru calculul
+sumei a 2 numere naturale. Cum trebuie apelata
+functia?
+
+letrec Fix=fun f x -> f(Fix f) x;;
+
+let plus=Fix(fun this (x,y) -> if y=0 then x
+
+                                         else succ
+(this (x, (pred
+y))));;
+
+a) plus(n,m)
+
+b) (plus n m)
+
+c) eroare: Fix e binar
+
+d) ((plus) n m)
+
+
+
+17. Fie definitiile:
+
+let curry f=fun x y -> f(x,y)
+
+   and uncurry f=fun(x,y) -> f x y
+
+   and g(x,y)=(y,x);;
+
+let gg=(uncurry(curry curry))(g);;
+
+a) apelul (gg 1 2) intoarce (2,1)
+
+b) apelul gg(1,2) intoarce (2,1)
+
+c) signatura (uncurry(curry curry)) nu poate fi
+sintetizata
+
+d) eroare la executie, deoarece gg asteapta un singur
+parametru
+
+
+
+18. Fie exceptia: Exception E of int -> int. Ce
+valoare calculeaza
+expresia:
+
+    try raise(E (fun x->2*x)) with E(f)->f(2);;
+
+a) eroare: exceptiile nu pot fi functionale
+
+b) eroare la executie
+
+c) tipul expresiei nu poate fi sintetizat
+
+d) 4
+
+
+
+19. Care este valoarea calculata de exppresia:
+
+  fun() -> (fun x->x)(fun x->x)?
+
+a) polimorfic slaba
+
+b) polimorfic tare
+
+c) monomorfica
+
+d) aplicatia e eronata ca tip
+
+
+
+20. Ce se intelege prin ordine normala de evaluare a
+parametrilor
+actuali ai unei functii?
+
+a) parametri actuali sunt evaluati de C inainte de a
+fi trtansferati
+functiei
+
+b) parametri actuali sunt evaluati doar cand e
+necesara valoarea lor in
+cursul evaluarii corpului functiei
+
+c) parametri actuali sunt evaluati "normal" de la
+stanga la dreapta
+
+d) parametri atuali sunt evaluati doar la cererea
+explicita a
+programatorului
+
+
+
+21. Un arbore binar de tip alfa(semnul) Arb poate fi
+vid sau poate
+contine cheie de tip alfa. Un arbora este reprezentat
+ca in exemplele
+urmatoare:
+
+vid pentru arbore vid;
+
+nod(s,k,n) pentru arbore nevid cu s:alfa Arb, D:alfa
+Arb si k:alfa
+
+Care din tipurile Caml de mai jos descrie corect
+reprezentarea aleasa?
+
+a) type 'a Arb=(vid:unit; nod:('a Arb,'a,'a Arb));;
+
+b) type 'a Arb=vid(nod of ('a Arb*'a*'a Arb));;
+
+c) repprezentarea nu poate fi descrisa corect de un
+tip Caml
+
+d) type 'a Arb=vid|nod of ('a Arb,'a,'a Arb);;
+
+
+22. Ce descrie tipul ('a->'b) list list?
+
+a) liste de liste de functii polimorfice
+
+b) liste de liste de functii slab polimorfice
+
+c) liste de functii care reintorc liste
+
+d) signatura este eronata
+
+
+
+23. Ce este o corutina?
+
+a) o inchidere functionala capabila sa-si reia
+executia din punctul
+corespunzator celei mai recente reveniri din functie
+
+b) o subrutina capabila sa coopereze cu o alta
+subrutina pentru a
+realiza eficient operatii cu numere complexe. Una
+lucreaza cu partea rela,
+cealalta cu partea imaginara
+
+c) o subrutina care foloseste coprocesorul aritmetic
+al masinii de
+calcul
+
+d) o functie ce poate fi apelata numai dintr-o clona a
+ei
+
+
+
+24. Fie constrtuctorul de exceptii E definit prin
+exception E of
+alfa(semn), unde alfa e un tip.
+
+Cum trebuie sa fie alfa pentru ca varificarea de tip a
+unui parametru
+ce utilizeaza E sa fie statica?
+
+a) polimorfic
+
+b) polimorfic slab
+
+c) monomorfic
+
+d) tipul nu este restrictionat
+
+????????????????
+
+25. Ce rezultat intoarce reise(E()) unde exceptia E
+este exception E of
+unit;;
+
+a) false
+
+b) tuplul vid
+
+c) valoarea E()
+
+d) nimic
+-----------------------------------
+

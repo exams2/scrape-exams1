@@ -1,0 +1,54 @@
+
+<div style="float:left" id="list"><label for='page-title' class='page-text'>Proiectare Logica</label>
+	<div style="clear:both"></div>		<div id="wrapper535" class="wrapper">
+		<div class="box" id="box535" onclick="togglePopBox('535')">
+                <span class="prof"><b> profesor:</b> </span> MarianaMocanu <br/>
+                <span class="materie"><b> materie: </b></span> Proiectare Logica <br/>
+                <span class="data"><b>data:</b></span> 2015-01-21<br/>
+                <span class="details"> 2013 Prima sesiune</span>
+                <span class="details"> CB 312</span>
+                <div class="tic" id="tic535" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=535" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('535')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('535')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper437" class="wrapper">
+		<div class="box" id="box437" onclick="togglePopBox('437')">
+                <span class="prof"><b> profesor:</b> </span> Mariana Mocanu <br/>
+                <span class="materie"><b> materie: </b></span> Proiectare Logica <br/>
+                <span class="data"><b>data:</b></span> 2013-09-12<br/>
+                <span class="details"> 2013 Prima sesiune</span>
+                <span class="details"> CB 315</span>
+                <div class="tic" id="tic437" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=437" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('437')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('437')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+		<script type="text/javascript">
+	$(document).ready(function() {
+	$('.box').hover(function(){
+				$(this).children('.tic').css({'background-position':'0px -231px'});
+				$(this).children('.buttonHolder').show();
+				$(this).children('.buttonHolder').children('.show').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.clone').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.cloneClose').click(function(e){e.stopPropagation();});
+				},function(){
+				$(this).children('.buttonHolder').hide();
+				$(this).children('.tic').css({'background-position':'0px -198px'});
+				});
+	});
+		$('.show').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.clone').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.cloneClose').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.box').hover(function(){$(this).css({'opacity':'0.8'});},function(){$(this).css({'opacity':'1'});});
+	</script>
+
+

@@ -1,0 +1,24 @@
+                   
+                        <fieldset>
+                        <label for='materie'>materie</label>
+                        <select name='materie' id='materie'> <option value='Algoritmi Paraleli si Distribuiti'> Algoritmi Paraleli si Distribuiti </option>  <option value='Aplicatii multimedia'> Aplicatii multimedia </option>  <option value='Aplicatii Web'> Aplicatii Web </option>  <option value='Arhitectura Calculatoarelor'> Arhitectura Calculatoarelor </option>  <option value='Arhitectura Sistemelor de Calcul'> Arhitectura Sistemelor de Calcul </option>  <option value='Automate Programabile si Microprogramare'> Automate Programabile si Microprogramare </option>  <option value='Baze de Date 1'> Baze de Date 1 </option>  <option value='Calculatoare Numerice 2'> Calculatoare Numerice 2 </option>  <option value='Elemente de Grafica pe Calculator'> Elemente de Grafica pe Calculator </option>  <option value='identificarea Sistemelor'> identificarea Sistemelor </option>  <option value='Ingineria Calculatoarelor'> Ingineria Calculatoarelor </option>  <option value='Ingineria Programarii'> Ingineria Programarii </option>  <option value='Ingineria Reglarii Automate'> Ingineria Reglarii Automate </option>  <option value='Limbaje Formale si Automate'> Limbaje Formale si Automate </option>  <option value='Microcontrolere Arhitecturi si Programare'> Microcontrolere Arhitecturi si Programare </option>  <option value='Modelare si Simulare'> Modelare si Simulare </option>  <option value='Proiectare cu Microprocesoare'> Proiectare cu Microprocesoare </option>  <option value='Retele Locale'> Retele Locale </option>  <option value='Sisteme cu Microprocesoare'> Sisteme cu Microprocesoare </option>  <option value='Sisteme cu microprocesoare integrate'> Sisteme cu microprocesoare integrate </option>  <option value='Sisteme de Operare'> Sisteme de Operare </option>  <option value='Traducatoare si Sisteme de Masura'> Traducatoare si Sisteme de Masura </option>  <option value='Transmisii de Date'> Transmisii de Date </option>  <option value='Utilizarea bazelor de date'> Utilizarea bazelor de date </option> </select> </fieldset><script>
+                             $('select#materie').selectmenu(
+                             { 
+                                width: 200,
+								maxHeight: 250,
+				select: function(event, options) {
+                                        $('#boxresult').hide('fast');
+                                        $('#boxresult').html("<img src='images/ui-anim_basic_16x16-3.gif' width='16' height='16' alt='' />");
+                                        $('#boxresult').show('fast');
+					$.ajax({ 
+						data: 'tags='+options.value+'&id=8',
+						type: 'GET',
+						url: 'scripts/menu_result.php',
+						success: function(value) {
+							$('#boxresult').html(value);
+						}
+					});
+				}
+                             }
+                             );
+                             </script>

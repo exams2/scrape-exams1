@@ -1,0 +1,24 @@
+                   
+                        <fieldset>
+                        <label for='materie'>materie</label>
+                        <select name='materie' id='materie'> <option value='Achizitii de date'> Achizitii de date </option>  <option value='Actionari'> Actionari </option>  <option value='Analiza Algoritmilor'> Analiza Algoritmilor </option>  <option value='Asamblare ( IOCLA  / PLAS )'> Asamblare ( IOCLA  / PLAS ) </option>  <option value='Calculatoare Numerice 1'> Calculatoare Numerice 1 </option>  <option value='Electronica Analogica'> Electronica Analogica </option>  <option value='Electronica Digitala'> Electronica Digitala </option>  <option value='Mecatronica'> Mecatronica </option>  <option value='Metematica 2'> Metematica 2 </option>  <option value='Metode Numerice (Automatica)'> Metode Numerice (Automatica) </option>  <option value='Paradigme de programare'> Paradigme de programare </option>  <option value='Programare Orientata Obiect'> Programare Orientata Obiect </option>  <option value='Proiectarea Algoritmilor'> Proiectarea Algoritmilor </option>  <option value='Proiectarea Dispozitivelor Numerice'> Proiectarea Dispozitivelor Numerice </option>  <option value='Protocoale de comunicatie'> Protocoale de comunicatie </option>  <option value='Semnale si Sisteme'> Semnale si Sisteme </option>  <option value='Sisteme dinamice cu evenimente discrete'> Sisteme dinamice cu evenimente discrete </option>  <option value='Tehnici de Optimizare'> Tehnici de Optimizare </option>  <option value='Teoria Sistemelor'> Teoria Sistemelor </option> </select> </fieldset><script>
+                             $('select#materie').selectmenu(
+                             { 
+                                width: 200,
+								maxHeight: 250,
+				select: function(event, options) {
+                                        $('#boxresult').hide('fast');
+                                        $('#boxresult').html("<img src='images/ui-anim_basic_16x16-3.gif' width='16' height='16' alt='' />");
+                                        $('#boxresult').show('fast');
+					$.ajax({ 
+						data: 'tags='+options.value+'&id=8',
+						type: 'GET',
+						url: 'scripts/menu_result.php',
+						success: function(value) {
+							$('#boxresult').html(value);
+						}
+					});
+				}
+                             }
+                             );
+                             </script>

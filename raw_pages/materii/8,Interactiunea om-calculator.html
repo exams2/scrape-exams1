@@ -1,0 +1,54 @@
+
+<div style="float:left" id="list"><label for='page-title' class='page-text'>Interactiunea om-calculator</label>
+	<div style="clear:both"></div>		<div id="wrapper832" class="wrapper">
+		<div class="box" id="box832" onclick="togglePopBox('832')">
+                <span class="prof"><b> profesor:</b> </span>  stefan trausan-matu <br/>
+                <span class="materie"><b> materie: </b></span> Interactiunea om-calculator <br/>
+                <span class="data"><b>data:</b></span> 2017-01-23<br/>
+                <span class="details"> 2016 Prima sesiune</span>
+                <span class="details"> C4 + optional </span>
+                <div class="tic" id="tic832" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=832" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('832')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('832')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper596" class="wrapper">
+		<div class="box" id="box596" onclick="togglePopBox('596')">
+                <span class="prof"><b> profesor:</b> </span> Stefan Trausan <br/>
+                <span class="materie"><b> materie: </b></span> Interactiunea om-calculator <br/>
+                <span class="data"><b>data:</b></span> 2015-02-07<br/>
+                <span class="details"> 2015 Prima sesiune</span>
+                <span class="details"> C4 342</span>
+                <div class="tic" id="tic596" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=596" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('596')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('596')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+		<script type="text/javascript">
+	$(document).ready(function() {
+	$('.box').hover(function(){
+				$(this).children('.tic').css({'background-position':'0px -231px'});
+				$(this).children('.buttonHolder').show();
+				$(this).children('.buttonHolder').children('.show').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.clone').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.cloneClose').click(function(e){e.stopPropagation();});
+				},function(){
+				$(this).children('.buttonHolder').hide();
+				$(this).children('.tic').css({'background-position':'0px -198px'});
+				});
+	});
+		$('.show').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.clone').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.cloneClose').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.box').hover(function(){$(this).css({'opacity':'0.8'});},function(){$(this).css({'opacity':'1'});});
+	</script>
+
+

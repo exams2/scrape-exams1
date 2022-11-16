@@ -1,0 +1,102 @@
+
+<div style="float:left" id="list"><label for='page-title' class='page-text'>Programare Web</label>
+	<div style="clear:both"></div>		<div id="wrapper757" class="wrapper">
+		<div class="box" id="box757" onclick="togglePopBox('757')">
+                <span class="prof"><b> profesor:</b> </span> Ciprian DOBRE <br/>
+                <span class="materie"><b> materie: </b></span> Programare Web <br/>
+                <span class="data"><b>data:</b></span> 2016-05-22<br/>
+                <span class="details"> 2016 Prima sesiune</span>
+                <span class="details">  </span>
+                <div class="tic" id="tic757" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=757" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('757')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('757')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper625" class="wrapper">
+		<div class="box" id="box625" onclick="togglePopBox('625')">
+                <span class="prof"><b> profesor:</b> </span> Ciprian Dobre <br/>
+                <span class="materie"><b> materie: </b></span> Programare Web <br/>
+                <span class="data"><b>data:</b></span> 2015-05-22<br/>
+                <span class="details"> 2015 Prima sesiune</span>
+                <span class="details"> C5 + optionali </span>
+                <div class="tic" id="tic625" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=625" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('625')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('625')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper478" class="wrapper">
+		<div class="box" id="box478" onclick="togglePopBox('478')">
+                <span class="prof"><b> profesor:</b> </span> Ciprian Dobre <br/>
+                <span class="materie"><b> materie: </b></span> Programare Web <br/>
+                <span class="data"><b>data:</b></span> 2014-05-24<br/>
+                <span class="details"> 2014 Prima sesiune</span>
+                <span class="details"> C4 341</span>
+                <div class="tic" id="tic478" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=478" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('478')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('478')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper472" class="wrapper">
+		<div class="box" id="box472" onclick="togglePopBox('472')">
+                <span class="prof"><b> profesor:</b> </span> ciprian dobre <br/>
+                <span class="materie"><b> materie: </b></span> Programare Web <br/>
+                <span class="data"><b>data:</b></span> 2014-05-14<br/>
+                <span class="details"> 2014 Prima sesiune</span>
+                <span class="details"> C2 341</span>
+                <div class="tic" id="tic472" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=472" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('472')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('472')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper402" class="wrapper">
+		<div class="box" id="box402" onclick="togglePopBox('402')">
+                <span class="prof"><b> profesor:</b> </span> Ciprian Dobre <br/>
+                <span class="materie"><b> materie: </b></span> Programare Web <br/>
+                <span class="data"><b>data:</b></span> 2013-05-20<br/>
+                <span class="details"> 2013 Prima sesiune</span>
+                <span class="details"> C5 1</span>
+                <div class="tic" id="tic402" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=402" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('402')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('402')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+		<script type="text/javascript">
+	$(document).ready(function() {
+	$('.box').hover(function(){
+				$(this).children('.tic').css({'background-position':'0px -231px'});
+				$(this).children('.buttonHolder').show();
+				$(this).children('.buttonHolder').children('.show').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.clone').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.cloneClose').click(function(e){e.stopPropagation();});
+				},function(){
+				$(this).children('.buttonHolder').hide();
+				$(this).children('.tic').css({'background-position':'0px -198px'});
+				});
+	});
+		$('.show').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.clone').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.cloneClose').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.box').hover(function(){$(this).css({'opacity':'0.8'});},function(){$(this).css({'opacity':'1'});});
+	</script>
+
+

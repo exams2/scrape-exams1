@@ -1,0 +1,158 @@
+                Baze de date- modele de subiecte din alti ani
+
+
+
+17 februarie 2005
+  
+  1. Indecsi multinivel cu arbori B si B+.
+  2. Baze de date Web (structura, entitati, tehnologii,  rolul componentelor) - in principiu schema cu serverul de web si BD explicata  era cea mai imp.
+  3. 2 fraze SQL complexe (de gen SELECT in SELECT, aici  se fol. CONTAINS si IN) pe 4 tabele a caror structura este data:
+  a. Numele angajatilor care lucreaza mai mult de 10 ore  la toate proiectele coordonate de departamentul din care fac parte.
+  b. Numele angajatilor care lucreaza mai mult de 20 de  ore la cel putin un proiect la care lucreaza si managerul departamentului din  care fac parte.
+  
+  Tabele:
+  Angajat(Nume, CNP, D_nr)
+  Proiect(P_nume, P_nr, D_nr)
+  Departament(D_nr, Manager(care e de fapt CNP al  managerului))
+  Lucreaza(CNP, P_nr, Ore)
+  
+  
+  13 februarie 2005
+  
+  1. Operatia alg. relationale JOIN.
+  2. Limbajul XML (sintaxa, DTD, particularitati) etc.
+  3. Se dau urmatoarele tabele:
+  - Plan_invatamant(Nume_d, cod_d, semestru, spec)
+  - Student(Nume, Prenume, cod_s, spec)
+  - Specializare(Nume_spec, spec)
+  - Note(cod_s, cod_d, nota)
+  
+  cu urmatoarele precizari:
+  - cele subliniate sunt chei;
+  - semnificatiii:
+  * cod_d - cod disciplina;
+  * cod_s cod student;
+  * spec - cod specializare.
+  
+  Sa se construiasca query-uri care sa faca:
+  a) Nume_spec pentru specializarile din semestrele 6, 7  la care nu exista nici un restantier;
+  b) Nume, prenume pentru studentii la specializarea AII  care au note > 4 la toate disciplinele din sem. 5 corespunzatoare  specializarii din care fac parte.
+  
+  Timp de lucru: 2 ore.
+  
+  
+  28 ianuarie 2005
+  
+  1. Operatia algebrei relationale PROJECT.
+  2. Limbajul XML (directive, caracteristici, DTD) si  exemplificare de cod XML pentru Carte_tel (Nume, Prenume, Adresa, NrTel).
+  3. Patru tabele pe care trebuiau facute 2 fraze SQL.
+  
+  
+  27 ianuarie 2005
+  
+  1. Diferente intre indecsii multinivel implementati  prin arbori B si cei implementati prin arbori B+.
+  2. Baze de date Web.
+  3. 2 fraze SQL complexe (de gen SELECT in SELECT) pe 4  tabele a caror structura este data.
+  
+  
+  Timp de lucru: 2 ore.
+  Notare: 20% laborator, 10% proiect, 70% nota examen.
+  
+
+
+  26 ianuarie 2006
+
+  A dat pe 2 numere:
+teorie
+nr 1: 1.operatii unare
+        2.tipuri de constrangeri in bd, descriere, declarare
+nr 2: 1.operatii binare
+       2.vederi in bd (view)
+ 
+Problema:
+se da baza de date:
+facultate(numef,codf)
+specializare (DenumireSpec,CodSpec,CodF)
+discipline(NumeD,CodD,CodSpec,Semestru)
+Student(NumeS,CodS,Semestru,codSpec)
+note(CodS,CodD,Nota,Data)
+ 
+Se cere:
+Nr1:
+a) Lista studentilor de la specializarea AII a fac Automatica, studebti in sem 5, avand note de trecere la toate disciplinele de specializare
+b)Lista studentilor si nr de restante ordonata descrescator dupa media disciplinelor la care au minim nota 5,studenti ai fac Automatica
+ 
+Nr2:
+a)Lista disciplinelor specializarii "informatica aplicata" la care toti studentii specializarii respective sunt integralisti
+b)Det studentilor si a mediei acesto
+
+
+
+  25 ianuarie 2006
+
+Teorie:
+1. Comparatie intre indecsi.
+2. Dependente functionale, nromalizare BD.
+
+Problema:
+
+Student (Nume, prenume, codStudent,codSpecializare,semestru)
+Specializare(codSpecializare, numeSpecializare, codFac)
+Facultate(codFac, numeFac)
+Disciplina(codD,numeD, semestru)
+Note(codD,codStud,nota)
+
+a.numele studentilor bursieri din semestrul 7 care sunt la specializarea aii la fac de automatica si care au cel mult 2 restante
+b.numele studentilor care au numar de restante >= decat media nr de restante la spec aii de la automatica
+
+
+  24 ianuarie 2006
+
+1. Relatii binare in algebra relationala.
+2. Constrangeri.
+3. Baza de date pe care trebuia sa faci 2 interogari
+SQL
+( De recapitulat AVERAGE , GROUP BY , ORDER BY)
+
+
+Atentie: Profu a dat pe cineva afara din examen
+deoarece l-a prins ca a copiat. L-a amenintat cu
+exmatriculare. Nu cred ca o sa fie cazul de
+exmatriculare... dar fiti atenti.
+
+Asezarea in banca: Va lasa sa stati cum vreti numai sa
+fiti unul in banca... Daca primele randuri raman
+neocupate le lasa asa si daca vede pe cineva ca
+vorbeste il muta in primele randuri....
+
+Nota: Trebuie sa iei 5 teorie si 5 selecturi. Daca nu
+faci nimic la selecturi nu te trece!
+
+Bafta ,
+
+TJ
+  
+ 
+  TBD - 2006-02-16 - teorie:
+
+1. componentele DBMS
+2. baze de date distribuite
+
+problema era cam lunga si nu imi mai amintesc detalii; poate stie
+altcineva... Oricum, mi s-a parut mai dificila decat cele de la
+celelalte examene de TBD din aceasta sesiune.
+
+
+  BD -10 februarie 2006
+
+1. View. Definire si modificare.
+2. Arhitecturi WEB
+3. Proiectarea unei BD pt un magazin : materialele sunt aduse de la furnizori pe
+baza unei facturi ; fiecare material intra in magazie si iese pe baza unui bon de
+consum ; mai exista si stoc unde fiecare material are un pret mediu ( de ex dc
+intr-o zi sunt aduse 2 kg de cuie la un pret si a doua zi sunt aduse 3 kg de cuie
+la alt pret in stoc trebuie trecut pretul mediu- chestia asta nu intervenea in select).
+Se cerea diagrama entitate-relatie + definirea tabelelor cu constrangeri.
+Interogarea: lista materialelor consumate in perioada ...(alegeam noi) din categoria
+...(alegeam noi) precum si id-ul bonului.
+

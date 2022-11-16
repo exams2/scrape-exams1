@@ -1,0 +1,9 @@
+Partial:
+	-Adresarea cu postincrementare si posdecrementare. La ce sunt utile?    (2p)
+	-Swapping. O structura de date care sa fie implementata in acest fel.   (3p) 
+	-O problema de-ti statea minte-an loc.                                  (4p)
+
+Final:
+	-Adresarrea unui cuvant pe 16 biti cu adresa de inceput A000H si ink unul cu adresa la A001H. Comparatie. (2p)
+	-Branch prediction. (3p)
+	-GDT,LDT   (4p)

@@ -1,0 +1,12 @@
+AC: 10 intrebari teorie (2pctx8 usoare,4pctx2 grele)
+	  intrebari grele
+		- modelul calculatorului (cu toata schema de registri)
+		- protocol de citire a instructiunilor de la programarea cu intrerupere
+	  2 probleme
+		- algoritm in cod ahpl pt inmultire in cod complementar dupa regula lui booth
+		- interfatarea unei imprimante si lucru fara memorie tampon
+IMPORTANTE: desene
+
+intrebari mici:
+- format virgula mobila reprezentare formula
+- operanzi ahpl (scalari,vectoriali,matriceali)

@@ -1,0 +1,8 @@
+Partial:
+	-ierarhizarea memoriei
+	-de ce e necesara alinierea datelor compacte in memorie
+	-lista de accese si drepturi. avantaje si dezavantaje
+Final:
+	-memoria flash a picat in 2011
+	-mecanisme de extragere in order si out of order
+	-cum obtii o temporizare de 4 secunde cu ajutorul sistemelor studiate pornind de la un semnal clock

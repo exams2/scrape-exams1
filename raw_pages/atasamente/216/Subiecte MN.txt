@@ -1,0 +1,81 @@
+1. Se dau A (nxn) tridiagonala simetrica pozitiv definita si b un
+vector din Rn. // R la puterea n
+Se considera functia:
+F(x) = x'Ax - b'x
+si se noteaza cu x* punctul de minim al lui F(x) adik F(x*) = min F
+(x) cand x se plimba in Rn
+
+a) aratatzi ca x* e solutie unica a sistemului Ax = b
+b) alg pentru calculul lui x*
+c) determinati expresia lui y = F(x*) in functie de date si
+prezentati cateva scheme pt calculul lui.
+d) care este cea mai buna si de ce?
+e) Aplicatie numerica:
+i) n=1, A=1, b=2
+ii) n=2, A = [1 2; 2 5]; b = [1; 3]
+
+2. Se da A (tot nxn) sup. bidiag. cu elem A_21 != 0;
+x x
+y x x
+x x
+x
+(cam asa)
+
+a) alg. care genereaza rotatia P_ki a.i. (P_ki A)(2,1) = 0 (sa
+anuleze y-ul). Cine sunt k si i?
+b) algoritmul de aplicare (A <- B = P_ki A)
+c) ce struct are B ?
+d) alg. care genereaza rot. Q_lj a.i (B Q_lj')(1,3) = 0;
+cine's l si j?
+c) alg. care o aplica (A <- C = B Q_lj)
+d) ce struct are C?
+e) continuati algoritmu a.i. A sa ajunga bidiagonala
+f) la ce se foloseste?
+
+
+3. Se dau A (nxn) si b un vector (n comp.)
+a) alg. care genereaza refl U1 ai (U1 b)(i) = 0, i = 2:n
+b) alg. care aplica (A <- B = U1 A )
+c) alg. care aplica la dreapta (A <- C = B U1)
+d) continuati alg. pentru a aduce matricea C la forma sup hess
+(A <- H = U'AU). Ce expresie are U ?
+e) aratati ca:
+i) H si A sunt ortho asemenea; care e matrix de transformare?
+ii) U'g = g, unde g = U1 b
+
+
+Timp de lucru: 2 ore (nu ai timp sa te gandesti)
+Prima problema cred ca era gresita.
+
+
+
+
+1. Se dau L din Rnxn, inferior triunghiulara si R din Rnxn
+superior tringhiulara unitate, memorate in tabloul T din Rnxn.
+Fie u,v din Rn doi vectori nenuli.
+a) scrieti alg care calculeaza in T, A=RL
+b) cat este det(A)?
+c) scrieti alg care calc miu= u'A^(-1)v. Cate operatii?
+d) aratati ca multimea N a vectorilor cu u'x=0 este un subspatiu
+liniar. Cat este dim N? cine este N perpendicular?
+e) calc pr orto a lui v pe N
+f) scrieti alg de calcul a unui sir de rotatii a.i P?....P?u =
+ro*e1, ro=scalar. Precizati indicii
+
+2. Se da A din Rmxn, m<n
+a) scrieti alg de generare a lui V1 a.i (AV1)1j = 0, j=2:n
+b) alg care aplica transformareaA <- B =AV1
+c) alg care genereaza U2 a.i (U2B)i1 = 0, i=3:n
+d) alg care aplica A <- C = U2B
+e) aratari ca A,C sunt ortogonal echivalente
+f) schema de calcul ce continua procedura inceputa la pctele a)-
+d)
+g) unde se poate utilize procedura de mai sus. Explicati cum.
+
+3. Se dau U din Rnxn ortogonala si D din Rnxn diagonala. Notam A
+= UDU'
+a) care sunt valorile si vectorii proprii ai lui A?
+b) care sunt val singulare ale lui A?
+c) alg care determina rangul r = rang(A)
+d) alg pt K(A)
+e) scrieti expresia lui A+

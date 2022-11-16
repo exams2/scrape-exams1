@@ -1,0 +1,5 @@
+1. omega(n^2+n) = omega(2n^2)
+2. algoritm pentru calcularea sumei primelor n/3 elemente de forma 5k+3 dintrun vector cu n^3 element. calcul complexitati
+3. f(x) = 4, pt x = 1; f(x) = 5*x-1+f(x-1), x>1; verificare corectitudine partiala
+4. se da o matrice de 21n^2 coloane, 6n linii. sa se verifice daca contine un element de forma 5k+4 printrun algoritm nedeterminist cu 9n^2 copii.
+5. SAT in NP / q_Sume in NP

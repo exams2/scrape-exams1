@@ -1,0 +1,19 @@
+Examenul de PF are 25 de intrebari a 4p fiecare => 100p.
+Se dau 10p din oficiu.
+Toate astea conteaza 4p din nota finala.
+ 
+Intrebari presupuse sigure:
+1 call/cc imbricate
+2 exceptii:
+  2.1. raise - ce intoarce? un tip polimorfic tare pentru evaluarea signaturii
+  2.2. un bloc try catch raise ce intoarce? nimic
+3. grafuri - ce-i in curs - se da un cod de trei randuri - ce graf se genereaza?
+4. variabile - moduri de transfer
+5. variabila inchisa in 2 inchideri se modifica intr-una (cu set!). se modif si in cealalta? DA
+6. sinteza de tipuri
+7. sharing (habar n-am ce-i aia)
+8. q: ce inseamna transparenta referentiala?
+9. functii curry/uncurry
+10. functie stricta/nestricta
+11. var. libera/legata
+12. evaluare lazy/...

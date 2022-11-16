@@ -1,0 +1,28 @@
+1.Sa se scrie un program in Haskell/Prolog care primeste o lista si intoarce o noua lista formata din elementele din input care au un numar de aparitii mai mare ca 4 .
+
+2. Sa se verifice daca o lista este palindrom. (Haskell)
+3. a(1).
+   b(2).
+   c(1,1).
+   c(1,2).
+   c(1,3).
+
+   a(X) :- !, c(X,Y).
+   a(X) :- b(X),c(X,Y).
+
+   De cate ori se satisface scopul a(X)?
+
+4. (define x (lambda() (+1 1)))
+    x
+    (x)
+    (x)
+
+    De cate ori se evalueaza expresia (+ 1 1)
+
+5.  Poate Iava sa fie folosit ca un limbaj functional? De ce?
+6.  Diferenta dintre BC si FC.
+7.  Ce inseamna tail recursive si tail end-optimization (nu stiu exact cum era formulata)
+8.  Poate un limbaj functonal sa aiba evaluare aplicativa? De ce(nu)?
+9. e foldr .... [(1,2),(3,4),(5,6)]  -> [2,12,30]  ( sa se inlocuiasca spatiile pentu a se obtine lista din dreapta)
+10. Doua dinferente intre sistemul de tipuri Haskell/Scheme.
+11. Se poate satisface scopul X=T, Z=[Y|T],[X]=Z. Daca da, care sunt valorile lui X,Y,Z,T?

@@ -1,0 +1,13 @@
+Teorie:
+1. definire si manipulare constrangeri
+2. tranzactii in BD distribuite
+
+3. Se da urmatoarea baza de date:
+facultate(cod_fac,decan,numef...)
+specializare(cod_spec,numes,cod_fac)
+disciplina(nume_d,cod_d,cod_spec,semestru,fverif...)
+student(nume_stud,pren_stud,semestru,cod_stud,cod_spec...)
+note(cod_stud,cod_d,nota,data...)
+
+3.1 Afisati numele studentilor de la specializarea IS ce sunt in semestrul 5 si care au minim o nota de 5 la o disciplina ce apartine altei specializari
+3.2 Afisati numele disciplinei la care toti studentii specializarii din care face parte disciplina sunt integralisti.

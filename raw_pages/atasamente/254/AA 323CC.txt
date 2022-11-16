@@ -1,0 +1,7 @@
+1. Pij infinit-numarabila / Hom(N,N) infinit-nenumarabila
+2. Inductia bine formata(definitie, exemple, structura) / Cazuri particulare de inductie bine formata(4 cazuri)
+3. Teorema Cook: Eval / Teorema Cook: Flow
+4. Definiti: algortim, functie efectiv calculabila, paradigma de programare / procedura efectiva, masina de calcul
+5. Daca avem un program de minimizare det complexitatea temporatala 
+6. T(n) = k1, n=1; T(n) = 8T(n/3) + k2*n. Metoda substituiei;
+7. Se dau doua grafuri orientate. cele doua grafuri sunt izomorfe daca (card(E1) = card(E1) si exista o functie bijectiva f:V1 -> V2, ai daca (u,v) din E1 => (f(u),f(v)) din E2). aratati ca Q in NP.

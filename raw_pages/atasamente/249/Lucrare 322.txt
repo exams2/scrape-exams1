@@ -1,0 +1,27 @@
+
+Subiectul 1:
+Nr1 :
+	teta(2*f(n)) + teta(5*g(n)) = teta (f(n) + g(n));
+Nr2:
+	teta(3*f(n)) * teta(7*g(n)) = teta (f(n) * g(n));
+
+SUbiectul 2:
+Nr2: un algoritm produsul numerelor dintr-un vector de n^2 elemente pare si <= 20) => de calculat complexitati
+Nr1: ceva cu suma, asemanator
+
+Subiectul 3:
+
+Nr2: o functie f (x) =  8,x = 1 si (2*x)^3*f(x-1),x>1. Algoritm determinist recursiv + dem partial corect
+Nr1: o functie asemanatoare
+
+Subiectul 4:
+
+Nr2:sa arati daca exista un numar par intr-un vector de 28*n^2+7 elemente
+facand un algoritm nedeterminist,cu 4n copii.
+si calculul complexitatii
+Nr1: asemanator
+
+Subiectul 5:
+
+nr2 : daca Q1 - NPC si Q1<= pQ2 atunci Q2 - NPD 
+nr1 : Q2 - NPD => exista Q1 -NPC si Q1<=pQ2

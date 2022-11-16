@@ -1,0 +1,24 @@
+                   
+                        <fieldset>
+                        <label for='materie'>materie</label>
+                        <select name='materie' id='materie'> <option value='Contabilitate'> Contabilitate </option> </select> </fieldset><script>
+                             $('select#materie').selectmenu(
+                             { 
+                                width: 200,
+								maxHeight: 250,
+				select: function(event, options) {
+                                        $('#boxresult').hide('fast');
+                                        $('#boxresult').html("<img src='images/ui-anim_basic_16x16-3.gif' width='16' height='16' alt='' />");
+                                        $('#boxresult').show('fast');
+					$.ajax({ 
+						data: 'tags='+options.value+'&id=20',
+						type: 'GET',
+						url: 'scripts/menu_result.php',
+						success: function(value) {
+							$('#boxresult').html(value);
+						}
+					});
+				}
+                             }
+                             );
+                             </script>

@@ -1,0 +1,12 @@
+1.Indecsi multinivel cu arbori B si B+ - CURS 4
+2.Particularitati ale BD distribuite - CURS 14
+3.Componente DBMS - CURS 1
+4.Comparatie intre indecsi - CURS 4
+5.Dependente functionale,normalizare BD - CURS 10
+6.BD web(structuri,tehnologii,rolul componentelor) - CURS 14
+7.Limbajul XML(sintaxa,DTD,particularitati)-de ex.cod pt cartele telefonice(Nume,Prenume,Adresa,Nr.Tel)
+8.View(Definire si modificare)
+9.Constrangeri(Declarare,descriere)
+10.Operatii unare - CURS 5
+11.Operatii binare - CURS 5
+12.Operatii in AR-project, bin

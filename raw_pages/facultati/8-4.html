@@ -1,0 +1,24 @@
+                   
+                        <fieldset>
+                        <label for='materie'>materie</label>
+                        <select name='materie' id='materie'> <option value='Aplicatii Integrate pt Intreprinderi'> Aplicatii Integrate pt Intreprinderi </option>  <option value='arhitecturi informatice performante'> arhitecturi informatice performante </option>  <option value='Arhitecturi si Prelucrari Paralele'> Arhitecturi si Prelucrari Paralele </option>  <option value='Baze de Date 2'> Baze de Date 2 </option>  <option value='Compilatoare'> Compilatoare </option>  <option value='E-commerce'> E-commerce </option>  <option value='Evaluarea Perfomantelor'> Evaluarea Perfomantelor </option>  <option value='Ingineria sistemelor de programe'> Ingineria sistemelor de programe </option>  <option value='Instrumente pentru dezvoltarea programelor'> Instrumente pentru dezvoltarea programelor </option>  <option value='Inteligenta Artificiala'> Inteligenta Artificiala </option>  <option value='Interactiunea om-calculator'> Interactiunea om-calculator </option>  <option value='Invatare Automata'> Invatare Automata </option>  <option value='Managementul Proiectelor'> Managementul Proiectelor </option>  <option value='Managementul Proiectelor Software'> Managementul Proiectelor Software </option>  <option value='Procesarea Semnalelor'> Procesarea Semnalelor </option>  <option value='Programare Web'> Programare Web </option>  <option value='Proiectarea si dezvoltarea serviciilor distribuite'> Proiectarea si dezvoltarea serviciilor distribuite </option>  <option value='Proiectarea VLSI'> Proiectarea VLSI </option>  <option value='Securitatea Sistemelor de Calcul'> Securitatea Sistemelor de Calcul </option>  <option value='Sisteme CAD-CASE'> Sisteme CAD-CASE </option>  <option value='Sisteme cu Microprocesoare'> Sisteme cu Microprocesoare </option>  <option value='Sisteme de Conducere a Proceselor Industriale'> Sisteme de Conducere a Proceselor Industriale </option>  <option value='Sisteme de conducere a robotilor'> Sisteme de conducere a robotilor </option>  <option value='Sisteme de prelucrare grafica'> Sisteme de prelucrare grafica </option>  <option value='Sisteme de Programe pentru Retele de Calculatoare'> Sisteme de Programe pentru Retele de Calculatoare </option>  <option value='Sisteme Incorporate'> Sisteme Incorporate </option>  <option value='Sisteme Tolerante la Defecte'> Sisteme Tolerante la Defecte </option>  <option value='Structuri Multiprocesor'> Structuri Multiprocesor </option> </select> </fieldset><script>
+                             $('select#materie').selectmenu(
+                             { 
+                                width: 200,
+								maxHeight: 250,
+				select: function(event, options) {
+                                        $('#boxresult').hide('fast');
+                                        $('#boxresult').html("<img src='images/ui-anim_basic_16x16-3.gif' width='16' height='16' alt='' />");
+                                        $('#boxresult').show('fast');
+					$.ajax({ 
+						data: 'tags='+options.value+'&id=8',
+						type: 'GET',
+						url: 'scripts/menu_result.php',
+						success: function(value) {
+							$('#boxresult').html(value);
+						}
+					});
+				}
+                             }
+                             );
+                             </script>

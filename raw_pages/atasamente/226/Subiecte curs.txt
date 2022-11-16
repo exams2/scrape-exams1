@@ -1,0 +1,16 @@
+1.DBMS
+2.Index primar
+3.Index secundar
+4.Index de grup
+5.Operatia Select
+6.Operatia Project
+7.Operatii binare (Reuniune,Intersectie,Diferenta)
+8.Operatia Join
+9.Restrictii de integritate in definirea bazei de date
+10.Functii cu rezultat pe linie
+11.Functii statice pe grupuri
+12.Vederi
+13.Secvente
+14.Indecsi
+15.Dependente functionale
+16.Normalizarea in BD

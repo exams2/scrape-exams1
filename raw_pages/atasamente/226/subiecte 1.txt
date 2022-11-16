@@ -1,0 +1,31 @@
+1. View. Definire si modificare.
+2. Arhitecturi WEB
+
+1. componentele DBMS
+2. baze de date distribuite
+
+1. Relatii binare in algebra relationala.
+2. Constrangeri.
+
+1. Comparatie intre indecsi.
+2. Dependente functionale, nromalizare BD.
+
+A dat pe 2 numere:
+teorie
+nr 1: 1.operatii unare
+        2.tipuri de constrangeri in bd, descriere, declarare
+nr 2: 1.operatii binare
+       2.vederi in bd (view)
+
+1. Indecsi multinivel cu arbori B si B+.
+2. Baze de date Web (structura, entitati,
+tehnologii,  rolul componentelor) - in principiu schema cu serverul de web si BD explicata  era cea mai imp.
+
+1. Operatia alg. relationale JOIN.
+2. Limbajul XML (sintaxa, DTD, particularitati) etc.
+
+1. Operatia algebrei relationale PROJECT.
+2. Limbajul XML (directive, caracteristici, DTD) si  exemplificare de cod XML pentru Carte_tel (Nume, Prenume, Adresa, NrTel).
+
+1. Diferente intre indecsii multinivel implementati  prin arbori B si cei implementati prin arbori B+.
+2. Baze de date Web.

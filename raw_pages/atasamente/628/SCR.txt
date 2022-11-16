@@ -1,0 +1,120 @@
+to.cam = transformare relativa care descrie pozitia si orientarea (sistemul de coordonate atasat 
+	planului imaginii fata de SC atasat RI); leaga lumea imaginii, exprimata in pixeli, de lumea
+	robotului, exprimata in mm;  
+vis.loc = amplasamentul atasat obiectului(piesa locaizata in scena), este SC atasat in centru de masa; 
+	calculul in timp real;
+grip.tras = amplasamentul SC din varful robotului, in functie de unde se afla piesa; stilul de 
+	prindere impus; leaga SC din varful robotului de cel din baza;
+piesa.loc = reprezinta amplasamentul din varful robotului fata de pct fix(piesa); compunerea celor 3;
+look and move = folosita in peste 90% din aplicatii din cauza simplitatii;
+Imagine analogica = reprezinta o functie f(x,y) > 0 de intensitatea luminoasa unde x, y sunt coordonate
+	spatiale ale pixelululi(pct in care analizam intensitatea);
+Imagina digitala = f*(x,y) se obtine prin esantionare spatiala si cuantificare a semnalului spatial;
+binarizare : 
+{
+	prag de binarizare = default = 63, se foloseste pent	ru a obtine max de info din img analizata;
+	binarizarea = transforma nivelurile de gri in binar;
+}
+
+======================================================================================================
+
+EFT =? look and move;
+Camera fizica = obiectul fizic, traductor;
+Camera virtuala = concept informational(set de date); fiecare camera fizica poate avea cate 2 
+	camere virtuale; La adept avem 4 fizice cu 8 virtuale;
+Iluminare = functionare buna este determinata de un sistem de iluminat in proportie de 65%;
+	luminarea trebuie sa fie invarianta, de aceea trebuie izolata camera la lumina naturala;
+	luminarea trebuie sa fie uniforma, adica jaluzele trase si cat mai multe neoane aprinse;
+	luminarea poate fi frontala(gen neoane) sau in diascopie(lumina vine de jos, gen piesele 
+	sunt puse pe sursa de lumina);
+Metoda de recunoastere explicita = bazata pe valorile numerice ale unor trasaturi definit pentru clase 
+				de obiecte(gen o trasatura poate fii nurmarul de gauri);
+Metoda de recunoastere implicita = bazata pe invatarea unui model(VPICTURE);
+
+======================================================================================================
+
+Pasi de lucru:
+{
+	1. Ajustare parametrii fizici ai camerei;
+	2. Calibrare camera;
+	3. Calibrare camera - robot;
+	4. Invatarea modelelor de piese;
+	5. Invatam offset de prindere;
+}
+Modalitati de a folosi VA:
+{
+	1. Look and move
+	2. Visual Servoing - se foloseste vederea in timp ce miscam robotu;
+}
+
+======================================================================================================
+
+Camera virtuala:
+{
+	1. Switches
+	2. Parameters
+	3. Modele
+	4. VQUEUE
+}
+
+Modele:
+{
+	1. Model camera - robot aka. calibrare -- obligatoriu!!;
+	2. Model scena - robot aka. recunoastere de obiecte;
+	{
+		explicita = bazata pe parametrii(arie, perimetru, nr de gauri, etc);
+		implicita = bazata oe modele ale claselor de obiecte;
+	}
+	3. Model robot - obiect aka. de prindere(exprima amplasamentul unui SC);
+	4. Modelul gripper - scena aka. evitare coliziuni;
+}
+
+VQUEUE = zona de memorie in care se depune informatia despre toate obiectele detectate si eventual 
+	recunoscute;
+Histograma = contine nivelurile de gri calculate sAU frecventa de aparitie a nivelurilor de gri
+		de aici se extrage minimul absolut si este folosit ca si prag de binarizare;
+
+
+======================================================================================================
+
+Metoda de recunoasterea a obiectelor explicit:
+{
+	1. Se selecteaza setul de trasaturi care face discriminarea intre clase;
+	2. Se invata valorile numerice ale trasaturilor pentru fiecare clasa;
+	3. Se retin valorile min si max pentru trasaturi;
+}
+Metoda de recunoastere a obiectelor implicit:
+{
+	1. Training = invatare de modele pentru fiecare clasa; etapa se face offline printr-o 
+		comanda monitor;
+	2. Planning = planificarea recunoasterii; offline pentru fiecare  model fara schimbarea 
+		iluminarii;
+	3. Search = recunoasterea; in timp real;
+}
+
+======================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

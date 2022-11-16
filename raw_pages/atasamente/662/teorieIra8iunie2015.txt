@@ -1,0 +1,5 @@
+examen 8 iunie 2015 
+
+Teorie: 
+1. Comparati arhitecturile de SRA cu 1sau mai multe grade de libertate in functie de obiectivele reglarii.
+2. Robuste?ea sistemelor de reglare numerica atunci când folosim metoda raspunsului impus.

@@ -1,0 +1,300 @@
+n cazul in care mai sunt oameni care nu s-au inscris pe grupul cx2011, am postat aici un mesaj de la Alex Juncu cu subiecte date anul trecut la APD:
+
+Salut.
+Exemple de subecte ce au fost anul trecut:
+
+
+
+Un numar:
+
+
+
+1: alegerea liderului cu alg ecou: complexitate ,justificare,
+
+descriere problema etc
+
+2: 3 procesoare cu o secventa de nr ordonate crescator, sa alegem
+
+numarul minim comun
+
+3: cititori si scriitori sau producator-consumator
+
+
+
+Altul:
+
+
+
+1. Atomicitate si sincronizare
+
+2. n procesoare, fiecare având un numar si trebuia sa afli minimul
+
+3. LeLann chang robert de comparat cu LeeLan
+
+  sau
+
+  determinarea arborilor de acoperire cu jetoane
+
+
+
+S-a dat pe 4 numere.
+
+
+
+
+
+
+
+----------------------------
+
+
+
+astea sunt toate:
+
+
+
+1. Comunicari sincrone si asincrone prin mesaje
+
+a. prezentarea generala a pb. Cum se face partajarea datelor. Cum se
+
+realizeaza sincroniarea
+
+b. Constructii pseudocod pt transmitere sincrona si asincrona de msg
+
+ex
+
+c. Cum se reprezinta transmiterea sincrona si asincrona a mesajului in
+
+MPI
+
+
+
+2. Se da o colectie de procese avand o tipologie de graf conex.
+
+Fiecare proces cunoaste identitatea proprie si identitatile vecinilor.
+
+Scrieti in
+
+pseudocod un algoritm pentru gasirea unei tipoligii conexe cu nr minim
+
+de legaturi intre procese. La terminarea algoritmului fiecare proces
+
+sa cunoasca
+
+identitatile vecinilor cu care a ramas conectat.
+
+
+
+3.1 Algoritmul pulsatiilor pentru stabilirea topologiei
+
+      Prezentarea Problemei
+
+      Descrierea Algoritmului
+
+      Complexitate
+
+
+
+3.2 Algoritmul pentru detectia terminarii folosind un jeton
+
+      Prezentarea problemei pentru procese organizate intr-un grid
+
+      Descrierea Algoritmului
+
+      Complexitate
+
+
+
+V8
+
+1. Alegerea liderului cu algoritmi de unda
+
+1.1 Przentarea problemei. Justificarea folosirii algoritmilor unda
+
+1.2 Descrierea solutiei, algoritm in pseudocod, justificarea
+
+corectitudinii, complexitate
+
+1.3 Ce alte metode de alegere a liderului cunoasteti?
+
+
+
+2. Se dau trei procese, fiecare avand o secventa de numere intregi
+
+ordonata crescator. Exista cel putin o valoare comuna celor trei
+
+secvente. Scrieti in
+
+pseudocod algoritmul care gaseste cea mai mica valoare comuna.
+
+Justificati solutia.
+
+
+
+3.1 Problema cititorilor si scriitorilor
+
+      Prezentarea problemei           0.2p
+
+      Descrierea algoritmului         0.5p
+
+      Cand este nevoie de acordarea prioritatii cititorilor? Dar
+
+scriitorilor? Justificati.              0.3p
+
+
+
+3.2 Problema producator-consumator cu mesaje sincrone
+
+      Prezentarea problemei           0.2p
+
+      Descrierea algoritmului         0.5p
+
+      Avantaje si dezavantaje fata de solutia cu mesaje sincrone.
+0.3p
+
+
+
+
+
+V9
+
+1.  Algoritmi Prefix
+
+1.1 Prezentarea generala a problemei            0.5p
+
+1.2 Solutie pentru gasirea ultimului element dintr-o lista simplu
+
+inlantuita folosind algoritmi prefix, descrierea solutiei in
+
+pseudocod, justificarea
+
+corectitudinii solutiei, analiza complexitatii
+
+1.3 Aplicatie: dati un exemplu pentru o lista de cel putin 4 elemente
+
+
+
+2.      Descrieti in pseudocod algoritmul distribuit de excludere
+mutuala
+
+care functioneaza in modul urmator: un proces care doreste sa intre
+
+in
+
+sectiunea critica trimite mesaje de cerere 'request' tuturor
+
+celorlalte procese. Pentru a putea intra efectiv in sectiunea critica
+
+este necesar sa
+
+primeasca de la fiecare cate un mesaj de raspuns 'reply'. La receptia
+
+unui mesaj 'request' un proces.....sa intre in sectiunea critica. Cand
+
+el are
+
+prioritate, mesajul 'reply' este intarziat....Analizati complexitatea
+
+algoritmului.
+
+
+
+3.1 Complexitatea calcului distribuit: modelul Foster. Exemplificare
+
+prin algoritmul Floyd cu descompunere bidimensionala.
+
+
+
+
+
+V6
+
+1. Atomicitate si sincronizare
+
+1.1 Prezentare generala a problemei, de ce este nevoie de aceste
+
+concepte...
+
+1.2 Cunstructii pseudocod pt atomicitate si sincronizare, exemple
+
+de...
+
+1.3 Cum se reprezinta atomicitatea in Java? Dar sincronizarea?
+
+
+
+2. Se da un tablou de procese M[], fiecare avand initial un numar
+
+intreg...valoarea minima pe care o detine.
+
+
+
+3.1 Algoritmul ...-Chang-Robert de stabilire lider
+
+      Prezentarea problemei
+
+      Descrierea algoritmului
+
+      Prin ce difera de algoritmul Lef...?
+
+
+
+
+
+---------------------------
+
+
+
+
+
+
+
+   V6
+
+   1. Atomicitate si sincronizare
+
+   1.1 Prezentare generala a problemei, de ce este nevoie de aceste
+
+   concepte...
+
+   1.2 Constructii pseudocod pt atomicitate si sincronizare, exemple
+
+
+
+   de...
+
+   1.3 Cum se reprezinta atomicitatea in Java? Dar sincronizarea?
+
+
+
+   2. Se da un tablou de procese M[], fiecare avand initial un numar
+
+   intreg...valoarea minima pe care o detine.
+
+
+
+
+
+ [ In mod ciudat, prin "tablou" se intelegea "vector" de procesoare
+(sau cel putin asa a raspuns cand l-am intrebat :) ) ]
+
+
+
+   3.1 Algoritmul LeLann-Chang-Robert de stabilire lider
+
+          Prezentarea problemei
+
+          Descrierea algoritmului
+
+          Prin ce difera de algoritmul LeLann?
+
+
+
+
+
+ La alegere cu
+
+ 3.2. Stabilirea unui arbore de acoperire prin mesaje de sondaj -
+descrierea problemei, descrierea algoritmului, complexitate.
+
+-

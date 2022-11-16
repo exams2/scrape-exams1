@@ -1,0 +1,101 @@
+17,Matematici Speciale
+17,Tehnici de Programare
+17,Retele de Calculatoare
+19,Algebra
+18,Baze de date1
+8,Bazele Electrotehnicii
+8,Fizica
+8,Gestiunea si Managementul Documentelor
+8,Mate 1 Analiza
+8,Mate 2 Algebra
+8,Mate 3
+8,Metode Numerice
+8,Programarea Calculatoarelor
+8,Proiectare Logica
+8,Structuri de Date
+8,Structuri de date si algoritmi
+8,USO
+8,Achizitii de date
+8,Actionari
+8,Analiza Algoritmilor
+8,Asamblare ( IOCLA  / PLAS )
+8,Calculatoare Numerice 1
+8,Electronica Analogica
+8,Electronica Digitala
+8,Mecatronica
+8,Metematica 2
+8,Metode Numerice (Automatica)
+8,Paradigme de programare
+8,Programare Orientata Obiect
+8,Proiectarea Algoritmilor
+8,Proiectarea Dispozitivelor Numerice
+8,Protocoale de comunicatie
+8,Semnale si Sisteme
+8,Sisteme dinamice cu evenimente discrete
+8,Tehnici de Optimizare
+8,Teoria Sistemelor
+8,Algoritmi Paraleli si Distribuiti
+8,Aplicatii multimedia
+8,Aplicatii Web
+8,Arhitectura Calculatoarelor
+8,Arhitectura Sistemelor de Calcul
+8,Automate Programabile si Microprogramare
+8,Baze de Date 1
+8,Calculatoare Numerice 2
+8,Elemente de Grafica pe Calculator
+8,identificarea Sistemelor
+8,Ingineria Calculatoarelor
+8,Ingineria Programarii
+8,Ingineria Reglarii Automate
+8,Limbaje Formale si Automate
+8,Microcontrolere Arhitecturi si Programare
+8,Modelare si Simulare
+8,Proiectare cu Microprocesoare
+8,Retele Locale
+8,Sisteme cu Microprocesoare
+8,Sisteme cu microprocesoare integrate
+8,Sisteme de Operare
+8,Traducatoare si Sisteme de Masura
+8,Transmisii de Date
+8,Utilizarea bazelor de date
+8,Aplicatii Integrate pt Intreprinderi
+8,arhitecturi informatice performante
+8,Arhitecturi si Prelucrari Paralele
+8,Baze de Date 2
+8,Compilatoare
+8,E-commerce
+8,Evaluarea Perfomantelor
+8,Ingineria sistemelor de programe
+8,Instrumente pentru dezvoltarea programelor
+8,Inteligenta Artificiala
+8,Interactiunea om-calculator
+8,Invatare Automata
+8,Managementul Proiectelor
+8,Managementul Proiectelor Software
+8,Procesarea Semnalelor
+8,Programare Web
+8,Proiectarea si dezvoltarea serviciilor distribuite
+8,Proiectarea VLSI
+8,Securitatea Sistemelor de Calcul
+8,Sisteme CAD-CASE
+8,Sisteme cu Microprocesoare
+8,Sisteme de Conducere a Proceselor Industriale
+8,Sisteme de conducere a robotilor
+8,Sisteme de prelucrare grafica
+8,Sisteme de Programe pentru Retele de Calculatoare
+8,Sisteme Incorporate
+8,Sisteme Tolerante la Defecte
+8,Structuri Multiprocesor
+11,Electronica si Informatica Medicala
+11,Sisteme electronice programabile
+15,Admitere
+16,Calcul cluster si grid
+16,Cloud Computing
+16,Curs avansat de ingineria programelor (CAIP)
+16,E-Guvernare
+16,Fundamentele Stiintei Serviciului
+16,High Performance Computing in SIM
+16,Protocoale de securitate (SAS)
+16,Sisteme Adaptive si Colaborative
+16,Sisteme Avansate de Analiza si Prelucrearea Imaginilor
+20,Contabilitate

@@ -1,0 +1,25 @@
+facultate(cod_fac,decan,numef...)
+specializare(cod_spec,numes,cod_fac)
+disciplina(nume_d,cod_d,cod_spec,semestru,fverif...)
+student(nume_stud,pren_stud,semestru,cod_stud,cod_spec...)
+note(cod_stud,cod_d,nota,data...)
+
+
+3.1 Numele si prenumele studentilor de la specializarea cu numele "AII", integralisti care 
+au pe semestrul 7 medii mai mari de 7
+3.2 Numele disciplinelor de la facultatea"Automatica" la care sunt maxim 2 restantieri.
+
+
+
+3.1 	select s.nume_stud, s.prenume_stud
+	from specializare spec, student s, note n, disciplina d
+	where s.cod_spec=spec.cod_spec and spec.numes='AII' and s.semestru=d.semestru d.semestru=7 and 
+		and n.cod_stud=s.cod_stud and n.nota>7
+
+3.2	select d.nume_d
+	from facultate f, disciplina d, student s, note n, specializare spec
+	where f.nume='Automatica' and spec.cod_fac=f.cod_fac and d.cod_spec=spec.cod_spec
+	group by d.nume_d
+	having (select sum(stud.nume)							<= 2
+		from student stud, note not
+		where stud.cod_stud=not.cod_stud and not.cod_d=d.cod_d and nota<5)x

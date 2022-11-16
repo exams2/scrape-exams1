@@ -1,0 +1,5 @@
+metoda iterativa/metoda arborelui de recurenta
+algoritm determinism pt o problema si calc complex.
+algoritm recursiv+dem partial corect
+algoritm nedet. pt o problema + clasa de complexitate
+k-clica NP/K-Acoperire NP

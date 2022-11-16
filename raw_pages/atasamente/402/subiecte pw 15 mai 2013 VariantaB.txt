@@ -1,0 +1,62 @@
+Varianta B
+
+Grile
+
+1. tagul Refresh
+folosit de motoarele de cautare pt re-listarea 
+paginilor
+
+2. ?
+
+3. $u = array("P","r","o","g","W","e","b");
+   $v = "";
+   foreach($u as $k) {$w = $v.$k;}
+	echo $w;
+Ce intoarce $w? => b;
+
+4. Care e mai important, cache-ul imaginii sau
+cel al paginii? (sau ceva de genul...)
+cel al imaginii, pagina se schimba mai des
+decat o imagine
+
+5. autentificarea asigura confidentialitatea
+datelor?
+da, dar mai sunt necesare tehnologii...
+
+6. Nu necesita server web:
+javascript, html, css, svg (celelalte variante
+contineau php)
+
+7. MVC - e arhitectura
+
+8. Pt a avea un site public e necesar si
+suficient:
+IP extern, server web, intrare DNS
+
+9. pt generare cod html:
+xml, javascript, css
+
+10. Pe server e un fisier .php ce contine
+doar cod HTML:
+serverul intoarce http 200.
+(variante: clientul/serverul intoarce eroare)
+
+
+
+Teorie (cate jumatate de pagina pentru primele
+3 subiecte)
+
+1. Ce inseamna un stil gresit pentru un site.
+(dadea o imagine cu background negru, scris 
+negru, doar litere mari, o imagine cu o rata
+care n-avea nicio treaba cu site-ul, etc.)
+
+2. Cum se poate imbunatatii page rankul unui 
+site de vanzari de laptopuri.
+
+3. Diferente intre XHTML si HTML 5.
+
+4. (a sau b1 si b2, dar Chilipirea a zis ca 
+da +25 puncte daca sunt facute amandoua bine)
+Chestiuni de securitate, cum am implementa si
+ce tehnologii am folosi...

@@ -1,0 +1,86 @@
+
+<div style="float:left" id="list"><label for='page-title' class='page-text'>Baze de Date 2</label>
+	<div style="clear:both"></div>		<div id="wrapper693" class="wrapper">
+		<div class="box" id="box693" onclick="togglePopBox('693')">
+                <span class="prof"><b> profesor:</b> </span> florin radulescu <br/>
+                <span class="materie"><b> materie: </b></span> Baze de Date 2 <br/>
+                <span class="data"><b>data:</b></span> 2015-12-12<br/>
+                <span class="details"> 2015 Partial</span>
+                <span class="details">  </span>
+                <div class="tic" id="tic693" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=693" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('693')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('693')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper609" class="wrapper">
+		<div class="box" id="box609" onclick="togglePopBox('609')">
+                <span class="prof"><b> profesor:</b> </span> Mircea Petrescu <br/>
+                <span class="materie"><b> materie: </b></span> Baze de Date 2 <br/>
+                <span class="data"><b>data:</b></span> 2015-02-11<br/>
+                <span class="details"> 2015 Prima sesiune</span>
+                <span class="details"> optional + C3 341, 342</span>
+                <div class="tic" id="tic609" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=609" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('609')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('609')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper597" class="wrapper">
+		<div class="box" id="box597" onclick="togglePopBox('597')">
+                <span class="prof"><b> profesor:</b> </span> Mircea Petrescu <br/>
+                <span class="materie"><b> materie: </b></span> Baze de Date 2 <br/>
+                <span class="data"><b>data:</b></span> 2015-02-08<br/>
+                <span class="details"> 2015 Prima sesiune</span>
+                <span class="details"> C3 </span>
+                <div class="tic" id="tic597" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=597" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('597')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('597')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper355" class="wrapper">
+		<div class="box" id="box355" onclick="togglePopBox('355')">
+                <span class="prof"><b> profesor:</b> </span> Mircea Petrescu <br/>
+                <span class="materie"><b> materie: </b></span> Baze de Date 2 <br/>
+                <span class="data"><b>data:</b></span> 2013-01-22<br/>
+                <span class="details"> 2013 Prima sesiune</span>
+                <span class="details"> C3 -</span>
+                <div class="tic" id="tic355" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=355" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('355')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('355')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+		<script type="text/javascript">
+	$(document).ready(function() {
+	$('.box').hover(function(){
+				$(this).children('.tic').css({'background-position':'0px -231px'});
+				$(this).children('.buttonHolder').show();
+				$(this).children('.buttonHolder').children('.show').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.clone').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.cloneClose').click(function(e){e.stopPropagation();});
+				},function(){
+				$(this).children('.buttonHolder').hide();
+				$(this).children('.tic').css({'background-position':'0px -198px'});
+				});
+	});
+		$('.show').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.clone').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.cloneClose').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.box').hover(function(){$(this).css({'opacity':'0.8'});},function(){$(this).css({'opacity':'1'});});
+	</script>
+
+

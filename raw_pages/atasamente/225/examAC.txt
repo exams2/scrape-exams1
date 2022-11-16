@@ -1,0 +1,27 @@
+1) lucrare de teorie fara cursuri pe banca din toata materia predata (inclusiv scheme bloc si organigrame, dar fara programele AHPL 
+de descriere a modulelor calculatorului didactic). 
+
+2) probleme, cu acces la documentatie tiparita (fara laptop-uri). Vor fi doua probleme, din curs si laborator/seminar. 
+Astazi la AC.
+
+Nu se poate copia..sta cu ochii pe noi.Notele sunt mari,nu se tine cont de regula cu jumatate in examen.
+Subiecte la teorie:
+1.schema CD plus resurse-4 puncte
+2.operatia de scriere cuvant(organigrama) -4 puncte
+3.structura unei proceduri in AHPL
+4reprezentarea numerelor in virgula mobila
+5.instructiunile de transfer
+6.formatul instructiunilor CD
+7.adresare indirecta si imediata
+8.memoria tampon a imprimantei
+9.Structura cuvantului de date de la interfata seriala
+10.instructiunile calculatorului didactic asociate sistemului de intreruperi
+
+Probleme:
+1.Implementare unitatii de comanda in hardware pentru metoda de  inmultire Booth in cod complementar( cu bistabili)
+2.Codifcare a doua instructiuni utlizate pentru depasire...
+La problema nu mai stiu exact tot enuntul.Daca mai stie cineva sa il transmita.
+
+
+Multumesc
+Bafta!

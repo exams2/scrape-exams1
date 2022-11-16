@@ -1,0 +1,20 @@
+Varianta D 
+
+1.(2pct) IPsec	
+	ce este SA(Security Association)
+	AH si ESP: ce sunt, unde se afla
+	diferente intre modul transport si tunel
+	ce face rec cand primeste un mesaj
+
+2.(1pct)ICMP
+	legatura cu IP, cum se foloseste de el
+	cum se afla MTU fol ICMP si cum e folosit ICMP la aflarea vecinilor
+
+3.2(1pct)SMTP
+	agenti
+	comenzi client server
+	ce sunt portile de e-mail, cum functioneaza, la ce sunt folosite
+
+3.1(1pct)retele Petri
+	nu stiu ce trebuia sa faci ca n-am citit enuntul
+	

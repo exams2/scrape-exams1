@@ -1,0 +1,28 @@
+311: 
+	formalism Hamilton
+	particula cunatica in groapa de potential cu pereti infiniti
+	statistica: pb. 10 
+	analitica: pb. 11
+
+312:
+	Ec Maxwell
+	particula cunatica in groapa de potential cu pereti infiniti
+	statistica: pb. 13
+	analitica: pb 11
+
+314:
+	Ec Maxwell
+	Legea echipartitiei si legea repartitiei dupa viteze absolute
+	statistica: pb 12
+	analitica:  pb 13
+
+315:
+	Ec Maxwell
+	particula cunatica in groapa de potential cu pereti infiniti
+	statistica: 13
+	analitica: 14
+ 	
+
+
+
+	

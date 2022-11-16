@@ -1,0 +1,46 @@
+                   
+                        <fieldset>
+                        <label for='facultate'>facultate</label>
+                        <select name='facultate' id='facultate'> <option value='18'> Matematica-Informatica </option> </select> </fieldset>                  <fieldset>
+                        <select name='an' id='an'>
+                                <option value='1'>an I</option>
+                                <option value='2'>an II</option>
+                                <option value='3'>an III</option>
+                                <option value='4'>an IV</option>
+                        </select>
+                       </fieldset> <script>
+                             var o = '1';
+                             var p = '18';
+                             $('select#facultate').selectmenu(
+                             {
+				select: function(event, options) {
+                                        p = options.value;
+										$('#result_mat').html("<img src='images/ui-anim_basic_16x16.gif' width='16' height='16' alt='' />");
+					$.ajax({ 
+						data: 'get_data='+options.value+'&get_data2='+o,
+						type: 'GET',
+						url: 'scripts/get_materie.php',
+						success: function(value) {
+							$('#result_mat').html(value);
+						}
+					});
+				}
+                             }
+                             );
+                             $('select#an').selectmenu(
+                             {
+				select: function(event, options) {
+                                         o = options.value;
+										 $('#result_mat').html("<img src='images/ui-anim_basic_16x16.gif' width='16' height='16' alt='' />");
+                                         $.ajax({ 
+						data: 'get_data='+p+'&get_data2='+options.value,
+						type: 'GET',
+						url: 'scripts/get_materie.php',
+						success: function(value) {
+							$('#result_mat').html(value);
+						}
+					});
+                             }
+                             }
+                             );
+                             </script>

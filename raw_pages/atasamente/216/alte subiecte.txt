@@ -1,0 +1,29 @@
+Nu mi-am notat pb, dar din amintirile mele asa sunt pb care ni le-a dat azi la ex.
+ 
+1. A, B tridiagonale simetrice din nxn . A=L*L' (L' este L transpus) si B = L' *L
+a) Sa se faca factorizarea lui A
+b) Sa se verif dc A si B sunt asemenea sau congruente (1 din 2). De ce?
+c) Sa se verif dc A si B au ac valori proprii  sau singulare (1 din 2) De ce?
+ 
+2.A de forma I - b*c' (iar transpus), A din nxn, b,cd din n
+a) Dc se da  un reflector U1, sa se faca un alg eficient pt U1*A*U1
+b) Sa se faca un alg pt generarea lui U1 ai (U1c)1 (pe coloana 1) este 0
+c) Ce matrici asemenatoare ca structura cu A ati intalnit in curs
+d) dc A la -1 este I - a* b* c', cat este a  pt ca A sa fie (nu mai stiu cum trebuia sa fie :D)
+e) Conditiile pt ca A sa fie ortogonala
+f) Exista V ortogonala ai Vc = (nu mai stiu cum :D :D)
+g)sa se rezolva eficient sistemul Ax=d
+ 
+3. A tridiagonala simetrica si o rotatie Q12
+a) Sa se aplice Q12 ai B=A*Q12
+b)ce structura are B
+b) sa se genereze o rotatie ai sa  (iarasi nu mai stiu..deh varsta)
+c) alg pt P*A*P'  (parca asa era)
+d)ce structura are matricea de mai sus
+si inca 2subpuncte tot legate de rotatii
+ 
+ 
+In esenta trebuia sa fii stiut alg de generare si aplicare de la rotatii si reflectori,  cum se determina valorile proprii si sa te prinzi ce se anuleaza in matrici.
+Nu a fost greu (dupa mine), dar a fost f putin timp. Adica dc apuci sa treci prin toate , nu apuci sa corectezi nimic, nici macar sa te uiti de 2 ori ( asta mi s-a intamplat mie), asa ca lucrati repede si incercati sa nu gresiti (prea mult)
+ 
+Daca cineva stie vreun subpunct din cele pe care le-am uitat sau poate aduce vreo corectie la ce am scris , e binevenit sa o faca.

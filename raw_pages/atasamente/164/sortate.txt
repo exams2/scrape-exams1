@@ -1,0 +1,428 @@
+(i)DIVERSE
+1. Descrieti un calculator la care ati lucrat.(adica structura: uP, mem, magistrale, I/O + pret)./pe care il avem/pe care il visam
+2. Modalitati de initializare a sistemului.
+3. Unitatea de arbitrare a microprocesorului – DMA – principii, schema, rolul (Karb)
+4. Lucrul cu intreruperi. Sistemul de intreruperi. Activarea NMI la initializare (la 8086)
+5. Sincronizare cu semafoare (la 8086) - LOCK programelul
+2. sincronizare cu WAIT
+6. Sincronizarea cu module externe folosind semnalul TEST.
+7. Posibilitati de sincronizare cu exteriorul la 8086 (min+max??)
+9. Accesul la mag (Kma)
+3. De ce s-a introdus magistrala LOCALDATA?
+3. Logica de acces la magistrala de date a sistemului - Kma; circulatia informatiei de intrare/iesire
+9. Cum se realizeaza Refresh la x86?
+1. descrieti uP folosit la orele de proiect si laborator (ATMega16)
+6. UAL la microcontrollerul din lab
+1. diferenta intre memoria RAM statica si cea dinamica
+1. Compatibilizarea cu magistrala AT referitor la semnalele BHE,A0,A1
+1. Functiile principale ale unitatii de interfata cu magistrala si al unitatii de executie la 8086 (BIU+EU)
+
+(ii)MAPPARE MEMORIE 
+(noi trebuia sa stabilim tipul componentei folosite si caracteristicile magistralei de adrese, date, comenzi)
+1. Sa se mapeze o memorie EPROM in spatiul 0-64k. (parca)
+2. Cuplare eprom 128k:128k+128k
+2. Sa se mapeze EPROM 256K:256K+128K (nu se dadea tipul de chip, trebuia sa-l alegi tu, de ex. 8086)
+4. cuplare EPROM intre 256k: 256k+256k
+4. cuplati 64k de memorie eprom in spatiul 512k-512k+64k
+2. Cuplati o memorie Eprom in spatiul 512(768):512 + 64
+3. Sa se cupleze o memorie EPROM in spatiul 768k, 768+64k
+2. Cuplati o memorie EPROM in spatiul 768 : 768 + 128 K
+4. Cuplati la o structura cu microprocesor 8086 o memorie EPROM in spatiul 512-576k
+5. Cuplarea unei memorii EPROM in spatiul 64k-128k
+6. Cuplati eprom 64k de la 768h la 8086
+7. Cuplarea unei memorii EPROM la o anumita adresa de o anumite dim.
+
+(iii)
+1. Sa se mapeze o memorie SRAM in spatiul 128k- (128k+256k)
+4. cuplarea unei memorii SRAM de 512k incepand cu adresa 128k : 
+ - apare nou faptul ca semnalul de memsel nu se mai obtine prin codificarea unul prefix al adreselor ,general valabil pentru orice adresa din spatiul mapat considerat
+ - Astfel pentru ex. de mai sus adresele sunt :
+    - 001 00000000000000000 (1<<17) 128k (prima adresa)
+    - 101 00000000000000000 (5<<17) 128k+512k
+    Ultima adresa a spatiului cerut fiind
+    - 100 11111111111111111
+ - Deci orice adresa din spatiul considerat trebuie sa aiba primii trei biti(A19 A18 A17) in urmatoarea multime { 001, 010,011,100} ( adica 001 ---> 100) Aceasta se codifica intr-o forma nu neaparat minimizata ~A19*(A18+A17) + A19*~A18*~A17 ,dar iese rapid dintr-o privire
+ - Daca se implementeaza cu chipuri de 64k ( 128k pe rand),pentru fiecare rand cs-ul se obtine ori folosind un decodificator 3:8 avand ca intrari A19 A18 A17 si ca enable semnalul memsel anterior decodificat
+2. Mapare SRAM in spatiul 512K: 512K+64K
+Rez. Mihai Maruseac:
+512K = 2^19; 64K = 2^16. Adresele pentru EPROM au bitul 19 setat, restul sunt 0 (adresa e pe 20 de bi?i). Deci EPROMSEL con?ine A19.
+Bi?ii 18, 17 ?i 16 sunt 0 (pentru cã cei 64K nu se ating de ei). De aici deduci cât este EPROMSEL (A19 * A18' * A17' * A16'). Apoi decizi ce cipuri folose?ti, cum le adresezi, etc ?i construie?ti structura cu multiplexoare, exact ca în curs.
+O rez completã :D
+20 de bi?i are magistrala de adrese. Trebuie sã adresãm spa?iul de mai sus cu a?tia 20 de bi?i.
+Spa?iul începe la 512k = 2^19 = 1000 0000 0000 0000 0000
+Spa?iul se terminã peste 64k => 1001 0000 0000 0000 0000 (64k = 2^16)
+Ultima adresã din spa?iul nostru: 1000 1111 1111 1111 1111
+Dacã te ui?i la prima ?i ultima linie, primii 4 bi?i sunt identici =>
+EPROMSEL = A19 * A18' * A17' * A16'
+Acum trebuie sã accesãm fiecare octet din cei 64k. ?tim cã magistrala de date e pe 16 bi?i ?i noi avem blocuri care pot scoate 8b. Deci vom pune câte 2 blocuri în paralel ?i le selectãm pe bazã de A0.
+Sã zicem cã avem blocuri de 8k. Pentru a lua o linie din bloc ne trebuie 13 bi?i (2^13 = 8k). A0 e luat, rãmân A1->A13.
+Cu blocuri de 8k, douã în paralel, ne trebuie 64k / (2*8k) = 4 rânduri = 2^2 => 2 bi?i pt selec?ia unui rând: A14 ?i A15. (folosim un DEC 2:4)
+Dacã te ui?i acum, am consumat to?i bi?ii dar pot sã accesez orice adresã.
+Mai rãmâne de fãcut schema ?i gata.
+2. Mapare SRAM in spatiul 512K: 512K+512K
+3. Mapare SRAM/DRAM in spatiul 768k, 768+64k
+3. RAM static 256 : 256 + 256
+3. Sa se cupleze o memorie statica RAM de 4Mo la o structura cu microprocesorul 80386 plasat in spatiul 0-4M
+4. Cuplati o memorie RAM de 4Mo la o structura cu 80386 , incepand de la adresa 0
+5. Conectarea unei memorii RAM statica de 2M in spatiul de adresare 0-2M la o structura cu 386
+5. cuplati o memorie SRAM de 4M in spatiul 2M-6M
+6. SRAM 4M in spatiul 0-4M la 386
+Trebuie doar sã ai grijã la semnalele de refresh (aici nu e cazul cã e staticã) ?i cele de selec?ie a rândului ?i a coloanei. E un exemplu similar în curs.
+3. Cuplare 64M SRAM in spatiul 0-64M la Pentium
+Analog ca mai sus, doar cã ai spa?iu mai mare pe magistrale.
+7. Cuplarea unei memorii SRAM de 512k incepand cu adresa 128k!!
+1. Cuplare Ram 3G incepand de la adresa 1G
+3. Cuplati o memorie RAM de 4G(2G) pe 32 biti in spatiul 0 - 4G
+3. Mapare memoria RAM 0-xMb
+3. Mapare XMb SRAM la 486.
+
+(iv)CUPLARE DIVERSE
+
+1. Sa se cupleze 4 porturi de intrare in spatiul 38h-3Bh si 4 porturi de iesire in spatiul 3Ch-3Fh.
+2. Sa se mapeze 4 porturi intrare, 4 porturi iesire in spatiul 1CH:1FH
+3. Sa se cupleze 8 porturi de intrare si 8 porturi de iesire  considerate ca registre in spatiul de adrese 78-7Fh (sau 58-5F sau 70H:77H)
+Este la cursul de I/O, la fel trebuie sã vezi partea de selec?ie pentru spa?iu respectiv de adresã ?i apoi partea de adresarã a fiecãrui port (sunt 8 porturi în total => 3 bi?i selec?ie, un mux 3:1)
+4. Sa se conecteze 4 porturi de intrare si 4 porturi de iesire in spatiul 68H-6BH
+6. cuplarea a 4 porturi de in shi 4 porturi de out la anumite adrese.
+7. cuplare 8 porturi in si 8 out la 38-3F (parca).
+8. Cuplati 8 porturi de iesire (acestea fiind considerate 8 registre de iesire) in spatiul de adresare 30H-37H
+5. Cuplati un port de iesire la adresa 55h (77h)
+5. Sa se mapeze la o adresa (exp: 768 + 64) porturi de I/E
+
+(v)
+1. Cuplarea unui modul DMA 8237 (schema si in cuvinte ce se intampla)
+2. Sa se cupleze o interfata pentru timp real.
+3. Cuplarea sist de intreruperi (la 8086, la o structura cu microprocesoare)
+4. Cuplarea unui port paralel 8255
+5. Cuplarea a 3 numaratoare programabile , unul utilizat pentru ceas de timp real, iar celelalte doua pentru controlul ratei de transfer a interfetei seriale
+Un numãrãtor e tot un fel de port I/O, vezi în cursul de DMA sau imediat dupã.
+6. Conectarea interfetei paralele (cica da sigur din cursul 11-12)
+7. cuplati un port paralel la 8086
+1. Conectarea interfetei paralele
+4. Cuplati un port paralel care adreseaza 3(2) registre pe 8 biti
+8. cuplarea unui ceas de timp real.
+9. cuplare 3 timer-e programabile
+8. cuplare timer 8253
+
+(vi)PROBLEME DE ARHITECTURA GENERALA
+1. Comparatie intre ciclul masina 8086 si 80386.
+La 8086 aveai T1,T2,T3,T4 ?i Tw, la 80386 trebuie sã te ui?i pe la
+final. Apoi mai trebuie sã-i faci o descriere a ce se întâmplã în
+fiecare ciclu.
+2. Comparatzie intre organizarea memoriei la 8086 shi 80386.
+1. Comparatie x86 - Pentium (puteam sa facem 8086 cu Pentium)
+3. Arhitectura generala a microprocesorului 8086
+3. Arhitectura microprocesorului 80486
+3. Arhitectura microprocesorului 80386
+4. Arhitectura Pentium;
+1. Caracteristicile generale ale unui procesor pentium
+5. Formatul general al instructiunilor microprocesorului 8086
+6. Spatiul de adresare memorie si I/O la uP 8086
+7. Comparatie generala intre 8086 , 80386 , 80486
+8. La alegere - trasaturi procesor - nu 086, nu 386
+9. Comparatie intre organizarea sp memorie si sp I/O
+10. Logica de control a registrului de adrese la o stuctura cu 8086
+Aici cred cã se referã la K_{MAG} ?i trebuie sã-i spui ce unitã?i sunt active ?i pe unde circulã datele când ai întreruperi, date pe 8 bi?i low/high, date pe 16 bi?i, opera?ii cu memoria, opera?ii cu porturile I/O. E undeva pe la cursul 3-4-5, înainte de partea de testare ini?ialã (dacã mai sunt la fel cursurile ca anul trecut)
+1. Caracteristici generale ale procesoarelor pe 32 de biti
+
+(vii) PROBLEME
+
+uP adresa pe 16 biti, date pe 8, semnale: IOW, IOR, MEMRD, MEMWR, WAIT
+1. Cuplati EPROM in spatiul 0-64k (2p)
+1. cuplare 16k EPROM la sfarsitul memoriei
+2. Cuplati SRAM in 0-16k (2p)
+5. cuplare SRAM intre 128k: 128K+512k
+2. Problema: cuplare 34k SRAM la inceputul memoriei
+3. Pe un port serial vin date. (nu prea des) Aceste date sunt stocate
+in memoria SRAM mapata la punctul 2. Proiectati o structura care
+faciliteaza generarea unei intreruperi atunci cand apare o pauza pe
+seriala (nu vin date timp de un anumit interval, la alegerea voastra).
+(5p)
+4. Dati un exemplu de aplicatie unde este absolut necesara prezenta
+unui uC. Explicati (1p)
+
+----
+
+Procesor cu A15:0,D0:7, semnale int, memrd, memwr, ior, iow, reset, wait. Ai doar cipuri de 1k,8k,32k
+ a)cuplare ram 8k la inceput
+ b)cuplare rom 17k la sfarsit
+ c)cuplare timer care sa genereze intrerupere o data la 5 sec folosind un ceas de 16MHz
+ d)ai inca un procesor. sa implementezi o unitate de arbitrare care sa ofere accesul unui microprocesor la memorie. Un singur procesor poate avea acces la un moment dat, daca apar 2 cereri simultane, cel cu mai multe incercari are prioritate.
+ Sau ceva in genul :P
+ 
+----
+
+ Se da un Video Controller, Microprocesor, RAM de 64k -> 0- 8000h microprocesor, 8000h - fffffh videocontroller , ROM 2k.
+ - portul de intrare 0x80h  - se activa cand microprocesorul sau video controllerul incercau sa intre pe magistrala de adrese de la 8000h in sus
+ - rom dezactivat la orice intrare pe portul 0x80h
+ - microprocesorul intra in HALT daca atat microprocesorul cat si video controllerul incearca sa acceseze zona 8000h->ffffh
+  -> Schema bloc
+  -> Maparea RAM
+  -> VideoController si logica de bootlooder ( mapare ROM)
+  -> Logica de arbitrare a accesului la RAM
+  
+----
+
+La problema   ca in subiectele de pe grup si ex. mai greu cu 2 subpuncte
+    NMI cand se acceseaza in afara memoriei
+    si sa se genereze RESET daca nu se scrie valoarea 0x42 la un port la alegere o data la 2^ 16 cicli de ceas
+    
+----
+
+La problema de la partea a doua am avut de mapat o memorie EPROM, o memorie SRAM, niste porturi (foarte asemanator cu problemele de la partea I) si mai era un subpunct mai complex, nu-mi mai aduc aminte exact cum suna...
+
+----
+
+Se dadea un procesor cu mag de date pe 8 biti si mag de adrese pe 16 biti si cu semnalele WR, RD, WAIT si INT
+ 
+a) Sa se cupleze o mem ROM de 8KB de la adresa 2000h (3p)
+b) Sa se cupleze o mem RAM de 28 KB (blocuri cu celule elementare de 2^n) de la adresa 8000h (4p)
+c) Nu mai stiu...avea 3p
+
+de la 0 la cat e ...sram (cred ca nu a vrut sa se complice cu cas & ras & stuff)
+chestia e ca tre sa stii cate linii de adresa are pentiumul (sper ca 32 :) )
+
+----
+
+16bitiA, 8bitiD, mapare EPROM in ultimii 16K, SRAM in primii 32K(16Kx8), DRAM 16K (pe acolo...). 
+a) Schema bloc
+b) legare SRAM + diferente fata de DRAM
+c) circuit de suprav un port cu 2 num (unul creste daca se scriu val div cu 4, celalalt pentru val nediv. cu 4). Int la depasire oricare... Daca se citea de la un port se da 1 daca NUM1 >= NUM2 si 0 altfel (<...).
+
+----
+
+1)Sa se proiecteze o structura cu un uP generic ce are adrese pe 16 biti, date pe 8 biti si semnale de comanda IORQ,MEMRQ,RD/WR(si INTA,RESET,CLK).Procesorul poate  accesa direct 64k SRAM si 4k memorie EPROM mapata in spatiul 0-4k. Sistemul este prevazut cu un mecanism de a accesa un total de memorie de 256k impartitia in pagini de 64k.Selectia unei pagini se face printr-un OUT pe portul 100H.La RESET se alege implicit pagina 0 de memorie.Cei  4k  de SRAM de la baza
+memoriei sunt mascati de memoria EPROM. In sistem mai exista si un sistem de intreruperi cu 22 niveluri, selectia uneia din cele 4 pagini genereaza o intrerupere pe unul din nivelurile IRQ2,IRQ3,IRQ4  respectiv IRQ5.
+Un numarator modulo 256 numara schimbarile de pagina generand  intrerupere IRQ1
+la depasire.
+Se cere:
+a)Schema bloc a sistemului
+b)Detalierea sistemului de memorie SRAM (folosind cipuri de 32k*8)
+c)Schema sistemului de intreruperi si cuvintele de intializare
+d)Detalierea sistemului de schimbare a paginilor de memorie
+
+----
+
+2)Sa se proiecteze o structura cu uP generic cu magistrala de adrese de 16 biti, magistrala de date de 8 biti si cu urmatoarele semnale de control:IORQ, MREQ, RD, WR, INT.
+Memoria:IORQ,MREQ,RD,WR,INT,cu memorie EPROM in spatiul 0-32k si restul de memorie RAM statica in 32-64k.
+Accesul la memorie se face combinand semnalele MREQ cu RD sau  WR, accesul la spatiul de I/O se face folosind IORQ combinat cu RD sau WR. In sistem exista un modul de urmarire a acceselor de I/O in domeniul 0-ffH, adresa de I/O fiind de 16 biti.Este posibila urmarirea mai multor adrese de port simultan  folosind in acest scop un registru masca ce contine partea fixa din setul de adrese ce  intereseaza  si un registru de adresa.Toate accesele in spatiul de I/O indicate prin registrele de  masca si adresa vor fi memorate in 3 memorii statice:8 biti pentru adresa, 8 biti pentru date  si 1 bit pentru tipul accesului (RD/WR).
+Memoriile statice au capacitatea de 256 cuvinte.Pentru contorizarea acceselor se foloseste uncontor de 8 biti ce genereaza INT la depasire.Sistemul mai dispune de un circuit generator de ceas de 4MHz si un circuit timer 8253.Ceasul necesar  sistemului este de 2 MHz.
+Se cere:
+a)Schema bloc a sistemului(magistrale,procesor,elemente principale)
+b)Detalierea sistemului de memorie SRAM 32-64K cu cipuri de 8k*8
+c)Obtinerea ceasului sistem de 2MHz si programarea 8253 pentru generarea unei frecvente de 20HZ
+d)Schema detaliata a sistemului de urmarire a acceselor
+e)Alocarea porturilor:
+-port IN/OUT 100H
+-reset contor adrese
+-scrie registru adresa acces SRAM 256
+-101H citeste tipul accesului(I/O)
+-102H citeste adresa/scrie registrul adresa
+-103H citeste date/scrie registru masca
+
+----
+
+3)Se considera un sistem de dezvoltare pentru un uP cu magistrala de adrese pe
+16 biti simagistrala de date pe 8 biti, complet separate si semnale de control:RD,WR,IORQ,MREQ,CLK,RESET
+Sistemul este prevazut cu o interfata seriala, o memorie RAM de 64k (8k*8) si o memorie ROM de 16K(un singur circuit 16k*8).ROM-ul contine un program de incarcare (BOOT) ce transfera un program de test pe interfata seriala in RAM.
+Dupa punerea sub tensiune, sistemul este in faza de BOOT, cand este permis accesul numai la scriere in RAM si citire din  ROM(pentru executia programului de BOOT).
+Dupa incarcarea completa a programului de test in  RAM, se comanda o scriere la portul 37H pentru a dezactiva ROM-ul de BOOT si pentru a reseta la  cald sistemul astfel incat sa ruleze programul de test(din RAM).In aceasta faza este permis  accesul de citire in toata memoria RAM si de scriere in spatiul 32k-64k.
+Se cere:
+a)Schema bloc(procesor,interfata seriala,memorie)
+b)Schema detaliata a RAM-ului static(se folosesc DCD 3.8)
+c)Decodificare port 37H si logica de schimbare a modului de lucru
+d)Logica de RESET la punerea sub tensiune si la schimbarea modului.
+
+----
+
+4)Sa se proiecteze o structura cu 8086 ce contine:
+-memorie EPROM de 64k mapata in spatiul 1M-64k->1M(cipuri 8k*8)
+-sistem de intreruperi
+-timer cu ceas de 5MHz;genereaza intreruperi la fiecare 20ms, avand adresa da baza 0x20h.Sistemul este prevazut cu un circuit de urmarire a acceselor de scriere la portul 0x70h.Toate datele scrise la acest port sunt stocate intr-o memorie SRAM de 2k*8(un 
+singur cip). mapata in spatiul 512k->514k.Cand memoria este umpluta se genereaza o interupere IRQ3.Memoria SRAM este accesata de procesor numai pe 8 biti.
+Se va folosi un numarator binar(pe 11 biti) pentru contorizarea  acceselor la portul 0x70h.
+Se cere:
+a)Schema bloc, cu evidentierea modului de functionare a procesorului(mod max/min)
+b)Detalierea memoriei EPROM(schema,mapare)
+c)Detalierea timerului(schema,initializarea modului de lucru,setarea divizorului)
+d)Schema bloc a circuitului de urmarire acceselor la portul 0x70h(folosind modulele indicate mai jos) si detalierea blocului de control.(num,sram,mux)
+
+Pentru a putea obtine dintr-o frecventa de 5MHz un tact cu frecventa de 20ms, trebuie o divizare cu 100000.Rezulta ca trebuie sa folosim 2 din cele 3 numratoare ale circuitului periferic 8253.Primul divizor poate fi setat 50000 iar celalalt cu  2, dar amandoua trebuie setate pentru o numarare zecimala.
+
+Decodificarea accesului la portul 0x70h se face:
+DEC.IN[0,7]=Adr[0,7] ->adresa portului
+DEC.En=IOW ->acces la periferice LA
+
+Umplerea memoriei SRAM este echivalenta cu terminarea numararii:
+IRQ3=NUM.Carry
+
+Fiecare acces la portu 0x70h duce la incrementarea numaratorului
+NUM.Clk=DEC.Out
+
+Adresele generate de numarator sunt multiplexate cu adresele generate de procesor
+MUX.In1[0,10]=NUM.Out[0,10]
+MUX.In2[0,10]=Adr[0,10] ->Accesul se face pe 8 biti
+
+Selectia pentru multiplexor este data tot de iesirea decodificatorului
+MUX.Sel=DEC.Out ->Daca este activ selecteaza iesirea numaratoprului
+
+Memoria este conectata pe magistrala de date a sistemului
+SRAM.Data[0,7]=Data[0,7]
+
+Daca procesorul vrea sa scrie la port(iesirea decodificatorului este activa) sau vrea sa
+citeasca din memorie atunci inseamna ca trebuie activat SRAM-ul:
+SRAM.CS=DEC.Out+SelectSRAMCitire unde:
+SelectSRAMCitire se obtine cand Adr[0,19] indica spatiul SRAM-ului iar 
+MEMR este activ(0)
+
+Daca se aceseaza portul atunci facem o acriere in SRAM
+SRAM.WR=DEC.Out
+
+Daca procesorul vrea sa acceseze SRAM-ul atunci citire:
+SRAM.RD=PROCESOR.MEMRD
+
+----
+
+se da un proc pe 32 bitzi...
+1. sa se mapeze 2 MB de memorie din module de 256k (x8, deci se pun cate 4 in linie)...2p
+exista pe adr 0-1024 256 de intreruperi. ne concentram pe intr 2,3,4 (nu a zis de unde numaram)
+exista porturile pe 16 biti care incep de la 20h (adik 20, 22,24h cred).exista numaratoare pe 16 bitzi...
+2. sa se genereze o NMI datorita Overflow (overflow in numarator oare ? sau unde ?)...3p
+3. sa se scrie la adresele porturilor 20h, (si cele 2 de dupa) ori de cate ori se declanseaza INT2,3,4 ...3p parca
+4. sa se reseteze numaratorul cand se CITESTE ceva de la porturile alea
+
+----
+
+problema:
+este similara cu cea din lab 5 de pe site-ul de pm:
+-un eprom 32k de la 0..32k (chipuri 8kx8)
+-un sram 32k cu chipuri de 8kx8 la 32k...64k
+-semnale memr, rd, wr, ...
+-numarator pe 8b de accese la portul 0xff pentru citire si scirere (separat pt fiecare)
+-la depasire numarare se genereaza o intrerupere
+
+se cere:
+a. schmea globala
+b. eprom si sram
+c. schema globala a numaratorului de accese la port
+
+----
+
+Se da un sistem cu un procesor generic cu urmatoarele carac:
+- mag adr. pe 16 bitzi
+- mag. date pe 8 bitzi
+- semnale: MEMRQ, IORQ, RD, WR, INT
+- 16k erprom la sf. zonei de adrese
+- 32k sram la inceputul zonei de adrese
+- un sistem de supraveghere a porturilor 0x100-0x1FF. Se vor numara accesele la poturile pare in CP shi a porturilor imparea in CI. CP shi CI sunt nishte numaratoare. O citire de la portul 0xFD intoarece valoarea lui CP iar de la 0xFE a lui CI. O scriere la portul 0xFF duce la resetarea numaratoarelor.
+Se cere:
+- schema bloc
+- schema pt. cuplarea eprom; comentarii pt. cazul sram
+- schema pt. sistemul de supraveghere
+
+----
+
+Se da un microprocesor generic cu urmatoarele caracteristici:
+- magistrala adrese: 16 biti
+- magistrala date: 8 biti
+- semnale procesor: MEMRQ negat, IORQ negat, RD negat , WR negat, INT
+- memorie: EPROM: ultimii 16K
+SRAM primii 32K
+DRAM 16K
+- circuit de supraveghere port 0xFF
+- 2 contoare : C4, NC4
+C4 = numara val. scrise divizibile cu 4
+NC4 = numara restul de valori
+- o citire la portul 0xF0
+raspunde 0 -> NC4 >= C4
+1 -> NC4 <C4
+- in caz de depasire al oricarui contor se genereaza intrerupere + resetare numarator.
+Se cere:
+a) schema bloc
+b) schema memoriei
+SRAM + comentarii
+diferente pt DRAM fol. cipuri 16K x 8
+c) schema circ. de supraveghere
+
+----
+
+uP generic, adrese si date pe 16 biti.Are:
+- EPROM 8K la sfarsit
+- SRAM 16K in primii 32K (aici era smecheria, ceva mem virtuala...)
+- o stiva HW in spatiul 32K - 32K+1, accesul R/W se face la portul 123h
+Cerinte:
+1. Schema bloc :1p
+2. Mapare EPROM cu 8Kx8 :2p
+3. Mapare SRAM cu 8kx8 :3p
+4. implementare stiva :4p
+
+----
+
+Structura bazata pe uP 8086. Semnale: MEMR,MEMWR,IOR,IOW,INT. 
+Date:8 biti, Adrese:16 biti. EPROM: 16k in ultimii 16k de memorie. SRAM: 128 k 
+In primii 32k de memorie(HINT: 4 bancuri de cate 32k, bancul e selectat de un registru cu adresa 100h, adica poti scrie sau citi nr bancului la/de la adresa 100h). La asta se cupleaza o interfata seriala sincrona (adica clk vine din afara ei) la adresa 3F8 h (parca).
+
+a. Schema bloc.
+b. Mapare EPROM cu chipuri de 16kx4.
+c. Mapare SRAM cu chipuri de 16kx8.
+d. Schema pt interfata seriala.
+
+----
+
+Problema suna ceva de genul:
+- uP generic, Adrese pe 16 biti, date pe 8 biti
+- semnale: MEMRD MEMWR IORD IOWR INT
+- EPROM 16k
+- RAM 16k
+Sist de nr a scrierilor la adrese pare reale in RAM
+
+Se cere:
+1. schema bloc (1p)
+2. Mpare EPROM in primii 16k memorie, folosind 16kX4 (3p)
+3. Mapare RAM in ultimii 32K, cu 4kX8 (3p)
+4. schema ptr sistemul de numarare (3p)
+
+----
+
+Problema:
+- microprocesor general
+- adrese pe 16 biti
+- date pe 8 biti
+- semnale WR,RD,IORD,IOWR,INT .....
+- memorie EPROM in spatiul 0-16K
+- mem. SRAM in 32-64K
+- un sistem care genereaza o intreruperec can se face un acces in spatiul nealocat de memorie
+- sistem de monitorizare la portul  0XFF
+- o citire la 0xF0  da numarul de accese de citire la 0xFF
+- o citire la 0xF1 da numarul de accese de scriere
+- scrieri la 0xF0,0xF1 inseamna resetare contoare
+- la depasire (contoare) se genereaza o intrerupere
+ 
+Se cere:
+1. schema de bloc
+2. mapare EPROM cu 8kx8 . CE schimbari apar la SRAM
+3. sistem care genereaza o intreruperec can se face un acces in spatiul nealocat de memorie
+4. sistemul de monitorizare
+ 
+----
+
+Problema (la fel pentru toti):
+....
+1. cuplare 16k EPROM la sfarsitul memoriei
+2. cuplare 34k SRAM la inceputul memoriei
+3. ceas de timp real (asemanatoar cu cel din problema rezolvata din acel .ppt)
+4. de cuplat la un microprocesor generic  un ADC de la Texas Instruments - ne-a dat specificatiile (semnale,etc) si aveam voie sa folosim orice alta componenta pentru a-l face sa mearga!
+
+----
+
+Se dadea un procesor cu mag de date pe 8 biti si mag de adrese pe 16 biti si cu semnalele MEMR,MEMW,IOR,IOW,RESET
+
+Pentru rezolvarea cerintelor se puteau folosi chipuri de 1k, 2k, 4k, 8k
+
+    Sa se mapeze o memorie EPROM de 8K in spatiul 0000 - 1FFFF
+    Sa se mapeze o memorie RAM statica de 13K in continuarea spatiului de memorie
+    Accesarea unui port de intrare si a unuia de iesire la adresa 6000H si 6001H. Porturile erau activate la semnalul RESET
+    Sistemul este prevazut cu un mecanism de a accesa un total de memorie de 256k impartitia in pagini de 64k. Sa se descrie sistemul de accesare a paginilor de memorie. Sa se proiecteze un sistem de accesare a patru pagini de 64k, in total 256k de memorie. Pentru a selecta pagina, se va scrie la un port indexul paginii la adresa X(cred ca adresa era FFF0H dar nu mai tin minte sigur)
+
+----
+

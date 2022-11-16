@@ -1,0 +1,67 @@
+Scriu din amintiri niste subiecte. Nu sunt toate intrebarile de la grila (lipsesc 2) si nu sunt 100% cum ne-au fost date, sunt mai mult orientative.
+Intrebarile sunt alea care au fost la examen, dar variantele de raspuns mai au lipsuri.
+
+Varianta A:
+
+Grila:
+
+1. Ce afiseaza codul javascript
+	var sir = "Hello happy people";
+	var result = sir.split(" ");
+	document.write(result);
+a. Hello
+b. H,e,l,l,o,h,a,p,p,y,p,e,o,p,l,e
+c. Hello,happy,people
+
+2. Ce semnifica o imagine-link cu borderul albastru?
+a. Link vizitat
+b. Link activ
+c. Link numaistiucum
+
+3. Cache-ul se implementeaza?
+a. Pe server
+b. Pe client
+c. Ambele
+
+4. Ce limbaje pot genera HTML?
+a. C, php, javascript
+b. C, xml, php
+c. xml, css
+
+5. Ce limbaje NU au nevoie de un server ca Apache?
+a. C, javascript, php
+b. html, css, javascript, xml
+b. php, java, css
+
+6. Faptul ca meta tag-urile ajuta obtinerea unui Pange Rank bun este un mit?
+a. Da
+b. Nu
+c. Da pentru anumite siteuri
+
+7. Un fisier .php contine doar html. Ce se intampla cand este accesat?
+a. Serverul intoarce cod 200
+b. Eroare pe server
+c. Eroare pe client
+
+8. Un fisier xml bine format  NU este obligatoriu sa
+a. fie corespunzator unui DTD
+b. sa aiba elementele corect imbricate
+c. sa aiba un singur element root
+
+9. MVC se foloseste ca sa: 
+a. Poti schimba baza de date 
+b. Separi responsabilitatile 
+c. Ambele
+
+Sinteza:
+1. Prezentati diferentele intre web 1.0 si web 2.0 in jumate de pagina.
+
+2. Specificati ce inseamna design prost avand ca exemplu un screenshot (jumate de pagina).
+
+3. Spuneti cum puteti imbunatati Page Rank-ul unui site (dati 5 exemple pentru site-ul din screenshot-ul dat)
+
+4. Alegere (ori faceti pe a ori ambele subpuncte ale lui b)
+a) Vreti sa faceti un 3d shooter multiplayer in browser. Ce tehnologii folositi si cum? Incarcarea e mai mare pe server sau pe client?
+
+b) 1. Un admin stabileste cache-uri pentru site-ul lui in mai multe ISP-uri. Site-ul are autentificare si e accesibil doar prin HTTPS. Chiar si cu cache-ul, load-ul serverului nu scade. De ce? Solutii?
+   2.Un site este atacat DDos. Ca raspuns, adminul afiseaza o pagina, in care a pus un video care roaga atacatorii sa inceteze, doar pentru IP-urile malitioase. Totusi, atacul nu se opreste. De ce? Solutii?

@@ -1,0 +1,13 @@
+1. Analizati efectul raportului Kr/Ti intr-un SRA cu regulator PI si proces de ordinul I.
+2. Cum se alege perioada de discretizare la metoda raspunsului impus si efectele ei.
+
+Algoritmul Dead-Beat si 
+predictor Smith. 
+
+Analizati influenta introducerii unui regulator de tip anticipatie-intarziere asupra stabilitatii unui sistem de forma    H(s)=w^2/[s(s+2w*zeta)]
+2. Metoda de sinteza a legii de reglare cu reactie dupa stare.
+
+Sisteme adaptive
+Rolul tau/ Tp
+
+

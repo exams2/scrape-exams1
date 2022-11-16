@@ -1,0 +1,10 @@
+Partial:
+	-Indicati mecanismul de adresare al unui vector de pointeri. (2p)
+	-Descrieti functiile P si V in conjunctie cu semaforul. Explicati rolul acestora in sincronizarea proceselor 
+         intr-un sistem multitasking. Indicati structura de date necesara implementarii. (3p)
+	-Comparatie intre mecanismele de segmentare si paginare. Avantaje, dezavantaje. (4p)
+
+Final:
+	-Utilizarea semnalului ALE la coprocesorul 8086. (2p)
+	-De ce sunt necesare structurile pipeline dinamice? (3p)
+	-Descrieti mecanismul de acces(ceas) prin intermediul structurii GATE. (4p)

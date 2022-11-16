@@ -1,0 +1,7 @@
+sUBIECTE IRA SESIUNE VARA 2015 5/06/2015
+ TEORIE: 
+*Efectul raportului k/Ti asupra suprareglajului unui sitem cu proces de ord I cu regulator PI.
+*Problematica discretizarii unui regulator de tip PID ( complexitate, implememtabilitate, precizie, flexibilitate). Analizatie problema din perspectiva alegerii metodei de discretizare si a alegerii perioadei de esantionare.
+
+PROBLEME:
+O pb cu sra in cascada si o pb cu discretizare

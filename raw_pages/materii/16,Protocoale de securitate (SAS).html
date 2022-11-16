@@ -1,0 +1,38 @@
+
+<div style="float:left" id="list"><label for='page-title' class='page-text'>Protocoale de securitate (SAS)</label>
+	<div style="clear:both"></div>		<div id="wrapper898" class="wrapper">
+		<div class="box" id="box898" onclick="togglePopBox('898')">
+                <span class="prof"><b> profesor:</b> </span> elena apostol <br/>
+                <span class="materie"><b> materie: </b></span> Protocoale de securitate (SAS) <br/>
+                <span class="data"><b>data:</b></span> 2018-01-28<br/>
+                <span class="details"> 2016 Prima sesiune</span>
+                <span class="details"> SAS </span>
+                <div class="tic" id="tic898" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=898" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('898')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('898')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+		<script type="text/javascript">
+	$(document).ready(function() {
+	$('.box').hover(function(){
+				$(this).children('.tic').css({'background-position':'0px -231px'});
+				$(this).children('.buttonHolder').show();
+				$(this).children('.buttonHolder').children('.show').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.clone').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.cloneClose').click(function(e){e.stopPropagation();});
+				},function(){
+				$(this).children('.buttonHolder').hide();
+				$(this).children('.tic').css({'background-position':'0px -198px'});
+				});
+	});
+		$('.show').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.clone').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.cloneClose').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.box').hover(function(){$(this).css({'opacity':'0.8'});},function(){$(this).css({'opacity':'1'});});
+	</script>
+
+

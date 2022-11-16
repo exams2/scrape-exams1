@@ -1,0 +1,70 @@
+
+<div style="float:left" id="list"><label for='page-title' class='page-text'>Evaluarea Perfomantelor</label>
+	<div style="clear:both"></div>		<div id="wrapper861" class="wrapper">
+		<div class="box" id="box861" onclick="togglePopBox('861')">
+                <span class="prof"><b> profesor:</b> </span> Mihai Chiroiu <br/>
+                <span class="materie"><b> materie: </b></span> Evaluarea Perfomantelor <br/>
+                <span class="data"><b>data:</b></span> 2017-02-04<br/>
+                <span class="details"> 2016 Prima sesiune</span>
+                <span class="details">  </span>
+                <div class="tic" id="tic861" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=861" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('861')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('861')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper747" class="wrapper">
+		<div class="box" id="box747" onclick="togglePopBox('747')">
+                <span class="prof"><b> profesor:</b> </span> mihai bucicoiu <br/>
+                <span class="materie"><b> materie: </b></span> Evaluarea Perfomantelor <br/>
+                <span class="data"><b>data:</b></span> 2016-02-10<br/>
+                <span class="details"> 2016 Prima sesiune</span>
+                <span class="details">  </span>
+                <div class="tic" id="tic747" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=747" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('747')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('747')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper746" class="wrapper">
+		<div class="box" id="box746" onclick="togglePopBox('746')">
+                <span class="prof"><b> profesor:</b> </span> Mihai Bucicoiu <br/>
+                <span class="materie"><b> materie: </b></span> Evaluarea Perfomantelor <br/>
+                <span class="data"><b>data:</b></span> 2016-02-09<br/>
+                <span class="details"> 2016 Prima sesiune</span>
+                <span class="details"> C5 </span>
+                <div class="tic" id="tic746" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=746" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('746')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('746')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+		<script type="text/javascript">
+	$(document).ready(function() {
+	$('.box').hover(function(){
+				$(this).children('.tic').css({'background-position':'0px -231px'});
+				$(this).children('.buttonHolder').show();
+				$(this).children('.buttonHolder').children('.show').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.clone').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.cloneClose').click(function(e){e.stopPropagation();});
+				},function(){
+				$(this).children('.buttonHolder').hide();
+				$(this).children('.tic').css({'background-position':'0px -198px'});
+				});
+	});
+		$('.show').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.clone').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.cloneClose').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.box').hover(function(){$(this).css({'opacity':'0.8'});},function(){$(this).css({'opacity':'1'});});
+	</script>
+
+

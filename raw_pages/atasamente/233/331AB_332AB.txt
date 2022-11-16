@@ -1,0 +1,10 @@
+Partial:
+	-intreruperi nemascabile
+	-diagrama proceselor si planificarea lor
+
+
+Final:
+	-etapele instructiunilor la pipeline
+	-segmentarea la 80386 a picat si asta cuiva
+	-rolul lu U si V la Pentium
+

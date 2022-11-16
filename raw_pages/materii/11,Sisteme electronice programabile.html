@@ -1,0 +1,38 @@
+
+<div style="float:left" id="list"><label for='page-title' class='page-text'>Sisteme electronice programabile</label>
+	<div style="clear:both"></div>		<div id="wrapper279" class="wrapper">
+		<div class="box" id="box279" onclick="togglePopBox('279')">
+                <span class="prof"><b> profesor:</b> </span> Lazarescu  <br/>
+                <span class="materie"><b> materie: </b></span> Sisteme electronice programabile <br/>
+                <span class="data"><b>data:</b></span> 2012-01-27<br/>
+                <span class="details"> 2012 Prima sesiune</span>
+                <span class="details"> ELA  444B</span>
+                <div class="tic" id="tic279" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=279" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('279')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('279')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+		<script type="text/javascript">
+	$(document).ready(function() {
+	$('.box').hover(function(){
+				$(this).children('.tic').css({'background-position':'0px -231px'});
+				$(this).children('.buttonHolder').show();
+				$(this).children('.buttonHolder').children('.show').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.clone').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.cloneClose').click(function(e){e.stopPropagation();});
+				},function(){
+				$(this).children('.buttonHolder').hide();
+				$(this).children('.tic').css({'background-position':'0px -198px'});
+				});
+	});
+		$('.show').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.clone').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.cloneClose').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.box').hover(function(){$(this).css({'opacity':'0.8'});},function(){$(this).css({'opacity':'1'});});
+	</script>
+
+

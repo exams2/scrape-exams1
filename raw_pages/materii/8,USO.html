@@ -1,0 +1,70 @@
+
+<div style="float:left" id="list"><label for='page-title' class='page-text'>USO</label>
+	<div style="clear:both"></div>		<div id="wrapper296" class="wrapper">
+		<div class="box" id="box296" onclick="togglePopBox('296')">
+                <span class="prof"><b> profesor:</b> </span> Razvan Deaconescu <br/>
+                <span class="materie"><b> materie: </b></span> USO <br/>
+                <span class="data"><b>data:</b></span> 2012-02-05<br/>
+                <span class="details"> 2011 Prima sesiune</span>
+                <span class="details"> CC </span>
+                <div class="tic" id="tic296" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=296" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('296')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('296')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper99" class="wrapper">
+		<div class="box" id="box99" onclick="togglePopBox('99')">
+                <span class="prof"><b> profesor:</b> </span> Razvan Rughinis <br/>
+                <span class="materie"><b> materie: </b></span> USO <br/>
+                <span class="data"><b>data:</b></span> 2011-09-13<br/>
+                <span class="details"> 2010 Prima sesiune</span>
+                <span class="details"> CA 312</span>
+                <div class="tic" id="tic99" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=99" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('99')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('99')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper98" class="wrapper">
+		<div class="box" id="box98" onclick="togglePopBox('98')">
+                <span class="prof"><b> profesor:</b> </span> Razvan Rughinis <br/>
+                <span class="materie"><b> materie: </b></span> USO <br/>
+                <span class="data"><b>data:</b></span> 2011-09-13<br/>
+                <span class="details"> 2010 Prima sesiune</span>
+                <span class="details"> CA 311</span>
+                <div class="tic" id="tic98" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=98" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('98')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('98')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+		<script type="text/javascript">
+	$(document).ready(function() {
+	$('.box').hover(function(){
+				$(this).children('.tic').css({'background-position':'0px -231px'});
+				$(this).children('.buttonHolder').show();
+				$(this).children('.buttonHolder').children('.show').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.clone').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.cloneClose').click(function(e){e.stopPropagation();});
+				},function(){
+				$(this).children('.buttonHolder').hide();
+				$(this).children('.tic').css({'background-position':'0px -198px'});
+				});
+	});
+		$('.show').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.clone').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.cloneClose').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.box').hover(function(){$(this).css({'opacity':'0.8'});},function(){$(this).css({'opacity':'1'});});
+	</script>
+
+

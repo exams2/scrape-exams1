@@ -1,0 +1,20 @@
+Examenul la SDA se da pe 2 numere.
+Asezarea se face: 5 pe rand. Randurile impare = nr 1, randurile pare = nr 2.
+
+
+
+Subiecte date azi la grupele 312/313 AA:
+
+SUBIECTUL 1:
+    Sa se scrie o procedura care primeste o lista de numere intregi. Procedura muta elementele acestei liste in alte 2 liste (initial vide) astfel:
+           nr 1:   - elementele negative in prima lista
+                     - elementele pozitive in a doua lista
+           nr 2:   - elementele impare in prima lista
+                     - elementele pare in a doua lista
+
+SUBIECTUL 2:
+    Sa se scrie o procedura recursiva care genereaza toate sirurile de 0 si 1 cu dimensiunea N (data) si care:
+            nr 1:   - contin P elemente 1 (P dat)
+            nr 2:   - grupurile de elemente 1 succesive au numar par de elemente.
+
+Bafta in continuare la ce mai aveti ;)

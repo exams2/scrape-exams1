@@ -1,0 +1,54 @@
+
+<div style="float:left" id="list"><label for='page-title' class='page-text'>Tehnici de Optimizare</label>
+	<div style="clear:both"></div>		<div id="wrapper436" class="wrapper">
+		<div class="box" id="box436" onclick="togglePopBox('436')">
+                <span class="prof"><b> profesor:</b> </span> Nelu Necoara <br/>
+                <span class="materie"><b> materie: </b></span> Tehnici de Optimizare <br/>
+                <span class="data"><b>data:</b></span> 2013-09-10<br/>
+                <span class="details"> 2013 Prima sesiune</span>
+                <span class="details"> AA </span>
+                <div class="tic" id="tic436" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=436" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('436')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('436')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper223" class="wrapper">
+		<div class="box" id="box223" onclick="togglePopBox('223')">
+                <span class="prof"><b> profesor:</b> </span> Ion Necoara <br/>
+                <span class="materie"><b> materie: </b></span> Tehnici de Optimizare <br/>
+                <span class="data"><b>data:</b></span> 2011-10-12<br/>
+                <span class="details"> 2010 Prima sesiune</span>
+                <span class="details"> AA/AB/AC </span>
+                <div class="tic" id="tic223" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=223" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('223')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('223')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+		<script type="text/javascript">
+	$(document).ready(function() {
+	$('.box').hover(function(){
+				$(this).children('.tic').css({'background-position':'0px -231px'});
+				$(this).children('.buttonHolder').show();
+				$(this).children('.buttonHolder').children('.show').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.clone').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.cloneClose').click(function(e){e.stopPropagation();});
+				},function(){
+				$(this).children('.buttonHolder').hide();
+				$(this).children('.tic').css({'background-position':'0px -198px'});
+				});
+	});
+		$('.show').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.clone').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.cloneClose').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.box').hover(function(){$(this).css({'opacity':'0.8'});},function(){$(this).css({'opacity':'1'});});
+	</script>
+
+

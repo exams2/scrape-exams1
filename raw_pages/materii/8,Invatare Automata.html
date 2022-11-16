@@ -1,0 +1,86 @@
+
+<div style="float:left" id="list"><label for='page-title' class='page-text'>Invatare Automata</label>
+	<div style="clear:both"></div>		<div id="wrapper752" class="wrapper">
+		<div class="box" id="box752" onclick="togglePopBox('752')">
+                <span class="prof"><b> profesor:</b> </span> adina magda florea <br/>
+                <span class="materie"><b> materie: </b></span> Invatare Automata <br/>
+                <span class="data"><b>data:</b></span> 2016-04-06<br/>
+                <span class="details"> 2016 Partial</span>
+                <span class="details"> C4 341</span>
+                <div class="tic" id="tic752" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=752" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('752')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('752')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper776" class="wrapper">
+		<div class="box" id="box776" onclick="togglePopBox('776')">
+                <span class="prof"><b> profesor:</b> </span> adina magda florea <br/>
+                <span class="materie"><b> materie: </b></span> Invatare Automata <br/>
+                <span class="data"><b>data:</b></span> 2016-06-07<br/>
+                <span class="details"> 2016 Prima sesiune</span>
+                <span class="details"> C4 </span>
+                <div class="tic" id="tic776" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=776" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('776')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('776')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper631" class="wrapper">
+		<div class="box" id="box631" onclick="togglePopBox('631')">
+                <span class="prof"><b> profesor:</b> </span> adina florea <br/>
+                <span class="materie"><b> materie: </b></span> Invatare Automata <br/>
+                <span class="data"><b>data:</b></span> 2015-05-30<br/>
+                <span class="details"> 2015 Prima sesiune</span>
+                <span class="details"> C4 toate</span>
+                <div class="tic" id="tic631" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=631" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('631')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('631')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper480" class="wrapper">
+		<div class="box" id="box480" onclick="togglePopBox('480')">
+                <span class="prof"><b> profesor:</b> </span> Magda Florea <br/>
+                <span class="materie"><b> materie: </b></span> Invatare Automata <br/>
+                <span class="data"><b>data:</b></span> 2014-05-26<br/>
+                <span class="details"> 2014 Prima sesiune</span>
+                <span class="details"> C4 341</span>
+                <div class="tic" id="tic480" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=480" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('480')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('480')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+		<script type="text/javascript">
+	$(document).ready(function() {
+	$('.box').hover(function(){
+				$(this).children('.tic').css({'background-position':'0px -231px'});
+				$(this).children('.buttonHolder').show();
+				$(this).children('.buttonHolder').children('.show').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.clone').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.cloneClose').click(function(e){e.stopPropagation();});
+				},function(){
+				$(this).children('.buttonHolder').hide();
+				$(this).children('.tic').css({'background-position':'0px -198px'});
+				});
+	});
+		$('.show').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.clone').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.cloneClose').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.box').hover(function(){$(this).css({'opacity':'0.8'});},function(){$(this).css({'opacity':'1'});});
+	</script>
+
+

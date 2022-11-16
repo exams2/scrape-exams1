@@ -1,0 +1,112 @@
+Roboti industriali:
+{
+	- sunt fixi;
+	- se fixeaza pe sol, suport fixat pe sol sau pe tavan;
+	- au segmente rigide;
+	- structura mecanica deschisa(lant cinematic deschis);
+	- manupilator robot;
+	- controller;
+	- modul de invatare;
+}
+Tipuri de brate/(roboti?);
+{
+	- cartezian;
+	- cilindric;
+	- sferic;
+	- antropomorfic;
+	- SCARA;
+}
+Tipuri de roboti(sigur):
+{
+	antropomorfici, Viper, IRB, SCARA;
+}
+
+==================================================================================================================================================================================================================================================================================================================
+
+Transformari = orice punct poate fi exprimat:
+{
+	1. Transformare relativa -> corespunzatoare spatiului cartezian;
+	2. Punct de precizie -> joint space SAU spatiu in care putem exprima in functie de poziitiele
+		articulatiilor;
+}
+
+======================================================================================================
+
+Conducerea miscarii(robot motion control):
+{
+	Ca intrare avem niste q-uri care reprezinta informatia utilizata de traductoare(masoara in
+		in permanenta deplasarile articulatiilor); niste parametrii Denavit-Hartenberg care 
+		reprezinta configuratia	geometrica a unei articulatii; d[i], teta[i] - parametrii
+		articulatiilor; a[i], alfa[i] - constante
+	1. Planificarea
+	{
+		- invatare pct finale = pick, place;
+		- calea poate fii liniara in spatiul cartezian sau liniara in sp. articulatiilor;
+	}
+	2. Generarea traiectoriei:
+	{
+		- pe parcurs exista deviatii care nu au voie sa depaseasca un prag/limita;
+	}
+	3. Urmaririea/regrlarea
+	{
+		- orice miscare trebuie urmarita/reglata cu o buna precizie, intr-un timp dat si cu 
+		o anumita viteza;
+		- viteza este data de la inceput (ALWAYS), fie de fiecare data cu alta valoare;
+	}
+}
+
+
+MOdelul CD - cinematica directa:
+{
+	Preaia valorile la un moment din articulatii si furnizeaza ca rezultat amplasarea robotului
+		in spatiu;
+	Etape:
+	{
+		1. Plasarea de sisteme de coordonate locale pe structura cinematica a robotului;
+			Alg. ALCSA; sistem fix; sistem mobil; --- ???
+		2. Calculul parametrilor Denarit - Hartenberg:
+		{
+			- (joint variables) d[i], teta[i] - parametrii articulatiilor una var, una const; 
+			- constante numerice(link parameters) a[i], alfa[i] - parametrii bratelor;
+		}
+		3. Calculul matricei de trecere;
+		4. Compunere A[i]^(i-1);
+	}
+}
+
+ALCSA(Assign link coorinates system):
+{
+	DE COMPLETAT MAI IN COLO;
+}
+
+======================================================================================================
+
+
+
+
+======================================================================================================
+
+Poblema de cinematica inversa are intotdeauna solutie daca X apartine spatiului de dexteritate;
+
+Spatiul de dexteritate = locul tuturor punctelor din spatiu care pot fi atinse de robot/punctul terminal;
+
+
+Metode de calcul:
+{
+	- algebrice - se lucreaza pe pre/post multipricare de matrici de transformare omogene;
+	- geometrice - se bazeaza pe gasirea unor puncte semnificative din structura robotului, a caror
+			pozitii si orientari(amplasamente) sa poata fi exprimate atat in functie de 
+			amplasamentul dorit al robotului cat si in functie de un nr redus de variabile
+			interne
+}
+
+
+
+
+
+
+
+
+
+
+

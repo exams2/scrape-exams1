@@ -1,0 +1,54 @@
+Nu mai tin minte tot. Au fost 14 subiecte. NU a fost grila ca in anii 
+trecuti...
+Dar oricum, care mai aveti grile din anii trecuti (sigur sunt oameni 
+care au), nu le mai tineti numai pt voi ca nu e frumos.
+
+Azi au fost 7 oameni si cine era pregatit putea misca :)
+Subiectele 1, 8 si inca 2 pe care nu le mai tin minte au avut 10 puncte, 
+restul 6 puncte.
+
+1. C=lambda x. lambda f. (f ((C C) f)), Q=(C C). Sa se arate ca Q este 
+combinator de punct fix.
+
+2. (lambda (x)
+        (if (zero? x)
+            1
+            (* x (x! (- x 1))))))
+
+    (define fact x!)
+
+    (define x!
+      (lambda (x)
+        (+ 1 x)))
+
+    (fact 3)
+
+Ce returneaza (fact 3)?
+
+3. (define f
+      (lambda (x)
+        (let ((a (delay (begin (set! x (+ x 1)) x))))
+          (lambda () (force a)))))
+
+    (define g (f 1))
+
+    (+ (g) (g) (g))
+
+4. (define f
+      (lambda (x)
+        (+ 1 2 (call/cc (lambda (c1) (+ x (g c1) 3))) 4)))
+
+    (define g
+      (lambda (c1)
+        (+ 1 2 (call/cc (lambda (c2) (+ c2 (f (c1 3))))) 4)))
+
+    (f 100)
+
+Ce returneaza (f 100)?
+
+5. Ce este o corutina?
+6. Ce inseamna evaluarea lenesa?
+7. Ceva cu o functie curry care trebuia scrisa in CAML (parca). 
+Specificat signatura functiei.
+8. Dadea un graf cu un singur nod si un singur arc si trebuiau scrise 2 
+functii in legatura cu graful respectiv.

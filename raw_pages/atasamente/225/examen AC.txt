@@ -1,0 +1,55 @@
+
+Examenul la Arhitectura Calculatoarelor va avea doua parti:
+
+1) lucrare de teorie fara cursuri pe banca din toata materia predata (inclusiv scheme bloc si organigrame, 
+   dar fara programele AHPL de descriere a modulelor calculatorului didactic).
+
+2) probleme, cu acces la documentatie tiparita (fara laptop-uri). Vor fi doua probleme, din curs si laborator/seminar.
+
+
+
+SUBIECTE 20.01.2010
+
+Teorie:
+   Ce s-a dat:
+         1. Descrierea sumatorului elementar complet.
+         2. Rolul registrelor RI, AM, CP, AIE la calculatorul didactic.
+         3. Modul de adresare directa, indirectea si bazata-indexata.
+         4. Modul de transfer date I/E.
+         5. Resursele principale ale interfetei de I/E.
+         6. Descrierea indicatorilor de conditii, instructiuni care afecteaza acesti indicatori.
+         7. Principiul de functionare al sistemului de intreruperi.
+         8. Organigrama generala a fazei de citire interpetare.
+        9. Citirea unui caracter folosind transferul programat, citirea ciclica a starii.
+        10. Descrierea caracteristicilor calclulatorului la care lucrati.
+
+   Ce s-a propus:
+        1. Reprezentarea numerelor in virgula fixa
+        2. Tipuri de comenzi AHPL
+        3. Descrierea sumatorului elementar complet
+        4. Etapele principale ale operatiei de inmultire in cod direct
+        5. Principiul de transfer date prin DMA
+        6. Resursele principale ale unei interfete de I/E
+        7. Principiul de functionare al unui sistem de intreruperi
+        8. Codificarea microinstructiunilo r
+        9. Descrierea functiilor in AHPL
+        10. Adunarea in cod complementar
+        11. Etapele inmultirii prin metoda lui Booth
+        12. Instructiuni care afecteaza indicatorii de conditie
+        13. Succesiunea operatiilor pentru scrierea unui caracter
+        14. Modurile de adresare la Calculatorul Didactic
+        15. Caracteristicile generale ale sistemului de intreruperi
+        16. Modurile de adresare bazata si indexata
+        17. Organigrama generala a fazei de citire si interpretare a calculatorului didactic
+        18. Resursele minime necesare pentru interfata I/O
+        19. Reprezentarea numerelor cu semn in virgula mobila
+        20. Operatori de selectie si de reducere in AHPL
+        21. Scrierea unui caracter in transferul programat cu intreruperi
+        22. Principiul de transfer de date prin canal I/O
+        23. Resursele principale ale unui modul DMA
+        24. Caracteristicile principale ale interfetei seriale
+        25. Rolul microsecventiatorul ui intr-o structura microprogramata
+        26. Schema generala a calculatorului didactic
+
+ 
+

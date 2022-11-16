@@ -1,0 +1,16 @@
+1. suma de la n=1 la infinit din sin(x)/(x^2)
+	Convergent sau divergent?
+
+2. suma de la n=1 la infinit din 1/ln(x)
+	Convergent sau divergent?
+
+3. integrala dubla pe domeniul D din x+y dx dy
+	D: {1<=x+y<=2, x<=y<=3*x}
+Rezolvati integrala prin schimbare de variabila
+
+
+
+Pentru un exercitiu rezolvat se dadea 5, iar pentru
+fiecare exercitiu rezolvat in plus se dadea cate un punct,
+celelalte exercitii nu sunt postate pentru ca mai nimeni
+nu le-a rezolvat pana am plecat eu.

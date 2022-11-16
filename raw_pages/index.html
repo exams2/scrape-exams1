@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+<title>exams.ro</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="ro" /> 
+<meta name="Publisher" content="exams.ro; http://www.exams.ro" /> 
+<meta name="Description" content="exams.ro vine in ajutorul studentilor isi propune sa centralizeze subiectele de la examene pe parcursul sesiunilor" /> 
+<meta name="Keywords" content="subiecte examen, examen, studenti, sesiune, facultate, student, examene, restante" /> 
+<meta name="Robots" content="all" /> 
+<meta name="Distribution" content="Global" /> 
+<meta name="Rating" content="General" /> 
+<meta name="Owner" content="exams.ro" /> 
+<meta name="Copyright" content="2011 - exams.ro - Toate drepturile rezervate" /> 
+<meta property="og:site_name" content="exams"/>
+<meta property="og:type" content="non_profit"/> 
+<meta property="og:title" content="exams.ro" /> 
+<meta property="og:url" content="http://exams.ro"> 
+<meta property="fb:app_id" content="187581467970671" /> 
+<meta property="og:image" content="http://exams.ro/images/logo.png"/> 
+<meta property="fb:admins" content="100001492261717"/>
+<link rel="SHORTCUT ICON" href="http://exams.ro/favicon.ico">
+
+<link rel="stylesheet" href="css/jquery.iviewer.css" />
+<link rel="stylesheet" type="text/css" href="css/global.css"/>
+<link href="css/jquery-ui-darkness.css" type="text/css" rel="stylesheet" >
+<link href="css/jquery.bubblepopup.v2.3.1.css" rel="stylesheet" type="text/css" />
+<link href='/uploadify/uploadify.css' type='text/css' rel='stylesheet' />
+<link type="text/css" href="css/jquery.ui.selectmenu.css" rel="stylesheet" /> 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script> 
+<script type="text/javascript" src="js/shortcut.js"></script>
+<script type="text/javascript" src="http://connect.facebook.net/en_US/all.js"></script>
+<script src="js/jquery.bubblepopup.v2.3.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/jquery.ui.core.js"></script>
+<script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="js/jquery.ui.position.js"></script>
+<script type="text/javascript" src="js/jquery.ui.autocomplete.js"></script>
+<script type="text/javascript" src="js/jquery.ui.mouse.js"></script>
+<script type="text/javascript" src="js/jquery.ui.draggable.js"></script>
+<script type="text/javascript" src="js/jquery.ui.selectmenu.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.2.js"></script>
+<script type='text/javascript' src='js/jquery.jeditable.mini.js'></script>
+<script type='text/javascript' src='/uploadify/swfobject.js'></script>
+<script type='text/javascript' src='/uploadify/jquery.uploadify.v2.1.4.min.js'></script>
+<script type="text/javascript" src="js/jquery.mousewheel.min.js" ></script>
+<script type="text/javascript" src="js/jquery.iviewer.js" ></script>
+<script type="text/javascript" src="js/fbs.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25210479-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<div id="main_container">
+<div id="main_wrapper">
+	<a href="javascript:void(0);" id="alogo">
+		<div id="logo"></div>
+	</a>
+	<div id="header">
+		<div id="header_buttons"></div>
+		<div id="search" class="ui-widget">
+			<form id="f_form" action="">
+				<input id="tags" name="tags" value=""/>
+				<input type="submit" value="" id="search_buton" class="buttons"></input>
+			</form>
+		</div>							
+		<div id="user-info-wrapper">
+			<div id="user-info" style="display:none;"></div>
+			<div id="user-info-details" style="display:none;"></div>
+        </div>
+        <div id="fblogin">
+			<button id="login" class="login" scope="email">&nbsp;</button>
+        </div>
+        <div id="fb-root"></div>
+	</div> 
+	<div id="main">
+		<div id="left"><style type="text/css">
+	.m {font-size: 100%;}
+fieldset { border:0; font-size: 16px; }	
+label,select,.ui-select-menu { float: left; margin-right: 10px; font-size:16px; color: #BBBBBB; background-color: #202020; width:202px; margin-bottom:2px;}
+select { width: 200px; }		
+.wrap span.ui-selectmenu-item-header,
+.wrap ul.ui-selectmenu-menu li a { text-decoration: underline !important;}
+a#ecursuri{background:url(images/banners/ecursuri_banner.png);width:202px;height:78px;display:block;margin-top:2px;}
+</style>
+<script type="text/javascript">	
+		$(function(){	
+			$("#institutie option[value='_blank']").attr('selected', 'selected');
+			$('select#institutie').selectmenu({
+				select: function(event, options) { 
+				    $("#result_mat").html("");
+					if (options.value == "_blank"){
+						$('#result_fac').html("");
+						return;
+					}
+				    $('#result_fac').html("<img src='images/ui-anim_basic_16x16.gif' width='16' height='16' alt='' />");
+					$.ajax({
+						data: "get_data=" + options.value,
+						type: "GET",
+						url: "scripts/get_facultate.php",
+						success: function(value) {
+							$("#result_fac").html(value);
+						}
+					});
+				}
+                        }); 
+                  });
+</script>
+<div class="m">
+<fieldset>
+			<label for="institutie">institutie</label>
+                        <select name="institutie" id="institutie">
+						<option value="_blank" selected="selected">alege institutia</option>
+                        			
+				<option value="7">Academia de Studii Economice</option>
+			
+                        			
+				<option value="6">Academia Tehnica Militara</option>
+			
+                        			
+				<option value="5">Politehnica Bucuresti</option>
+			
+                        			
+				<option value="13">Politehnica Timisoara</option>
+			
+                        			
+				<option value="14">Universitatea de Vest din Timisoara</option>
+			
+                                                </select>
+</fieldset>
+<div id="result_fac">    </div>
+<div id="result_mat">    </div>
+	
+</div>
+<!--<div class="partners">
+	<fieldset>
+			<label for="banners">cursuri politehnica</label><br/>
+			<a href="http://andrei.clubcisco.ro/cursuri/" target="_blank" class="direct-link">andrei.clubcisco.ro/cursuri</a>
+	</fieldset>
+</div>!-->
+</div>	
+		<div id="center" class="center2" style="float:none">
+	        <div id="boxresult"></div>
+	        <div id="text-page">
+				<label for="page-title" class="page-text2">exams.ro</label>
+				<p>exams.ro Vine in ajutorul studentilor. Isi propune sa centralizeze subiectele de la examene pe parcursul sesiunilor.</p>
+			</div>
+	        <div style="clear:both"></div>
+	    </div>
+		<div id="right" class="dropZone">
+	        <div id="butoane">  
+				 <input type="button" value="" id="add" class="buttons"></input>
+				 <input type="button" value="" id="news" class="buttons" onclick="change_page('latestsubjects.php');"></input>
+	             <input type="button" value="" id="info" class="buttons" onclick="change_page('info.php');"></input>
+	             <input type="button" value="" id="bugs" class="buttons"></input>
+				 <input type="button" value="" id="publicity" class="buttons" onclick="change_page('banners.php');"></input>
+	        </div>
+	    	<div id="pac">
+
+
+			<div id="clone_zone">
+<label class="page-text"><img src="images/pin.png" width="16" height="16" alt=""/>pin board</label>
+<div style="clear:both"></div>
+</div>
+			</div>
+		</div>
+		<div id="popBoxWrapper" style="display:none" class="miniW"></div>
+		<div id="x" style="display:none" onclick="closeBox()" class="x miniX"></div>
+		<input type="button" value="" id="maximize" style="display:none;" class="miniMaxi"/>
+		<input type="button" value="" id="minimize" style="display:none;" class="miniMini"/>
+		<div id="popBox" style="display:none;" class="miniB"></div>
+		<div id="alertBox" style="display:none;">
+			<div id="alertBoxHeader"></div>
+			<button id="deleteComment" onclick="toggleOffAlert();"></button>
+			<div id="alertBoxContent"></div>
+		</div>
+		<div id="footer"> exams.ro &copy; 2011 - 2012<br />
+					<div id="count"></div>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html>
+
+

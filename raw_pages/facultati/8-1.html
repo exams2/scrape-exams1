@@ -1,0 +1,24 @@
+                   
+                        <fieldset>
+                        <label for='materie'>materie</label>
+                        <select name='materie' id='materie'> <option value='Bazele Electrotehnicii'> Bazele Electrotehnicii </option>  <option value='Fizica'> Fizica </option>  <option value='Gestiunea si Managementul Documentelor'> Gestiunea si Managementul Documentelor </option>  <option value='Mate 1 Analiza'> Mate 1 Analiza </option>  <option value='Mate 2 Algebra'> Mate 2 Algebra </option>  <option value='Mate 3'> Mate 3 </option>  <option value='Metode Numerice'> Metode Numerice </option>  <option value='Programarea Calculatoarelor'> Programarea Calculatoarelor </option>  <option value='Proiectare Logica'> Proiectare Logica </option>  <option value='Structuri de Date'> Structuri de Date </option>  <option value='Structuri de date si algoritmi'> Structuri de date si algoritmi </option>  <option value='USO'> USO </option> </select> </fieldset><script>
+                             $('select#materie').selectmenu(
+                             { 
+                                width: 200,
+								maxHeight: 250,
+				select: function(event, options) {
+                                        $('#boxresult').hide('fast');
+                                        $('#boxresult').html("<img src='images/ui-anim_basic_16x16-3.gif' width='16' height='16' alt='' />");
+                                        $('#boxresult').show('fast');
+					$.ajax({ 
+						data: 'tags='+options.value+'&id=8',
+						type: 'GET',
+						url: 'scripts/menu_result.php',
+						success: function(value) {
+							$('#boxresult').html(value);
+						}
+					});
+				}
+                             }
+                             );
+                             </script>

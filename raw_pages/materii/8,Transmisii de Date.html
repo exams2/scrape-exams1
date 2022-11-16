@@ -1,0 +1,102 @@
+
+<div style="float:left" id="list"><label for='page-title' class='page-text'>Transmisii de Date</label>
+	<div style="clear:both"></div>		<div id="wrapper773" class="wrapper">
+		<div class="box" id="box773" onclick="togglePopBox('773')">
+                <span class="prof"><b> profesor:</b> </span> Max <br/>
+                <span class="materie"><b> materie: </b></span> Transmisii de Date <br/>
+                <span class="data"><b>data:</b></span> 2016-06-03<br/>
+                <span class="details"> 2016 Prima sesiune</span>
+                <span class="details"> 333 AB</span>
+                <div class="tic" id="tic773" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=773" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('773')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('773')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper490" class="wrapper">
+		<div class="box" id="box490" onclick="togglePopBox('490')">
+                <span class="prof"><b> profesor:</b> </span> Max <br/>
+                <span class="materie"><b> materie: </b></span> Transmisii de Date <br/>
+                <span class="data"><b>data:</b></span> 2014-05-30<br/>
+                <span class="details"> 2014 Favorite</span>
+                <span class="details">  </span>
+                <div class="tic" id="tic490" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=490" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('490')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('490')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper502" class="wrapper">
+		<div class="box" id="box502" onclick="togglePopBox('502')">
+                <span class="prof"><b> profesor:</b> </span> max <br/>
+                <span class="materie"><b> materie: </b></span> Transmisii de Date <br/>
+                <span class="data"><b>data:</b></span> 2014-06-11<br/>
+                <span class="details"> 2014 Prima sesiune</span>
+                <span class="details"> AA 334</span>
+                <div class="tic" id="tic502" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=502" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('502')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('502')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper423" class="wrapper">
+		<div class="box" id="box423" onclick="togglePopBox('423')">
+                <span class="prof"><b> profesor:</b> </span> daniel merezeanu <br/>
+                <span class="materie"><b> materie: </b></span> Transmisii de Date <br/>
+                <span class="data"><b>data:</b></span> 2013-06-18<br/>
+                <span class="details"> 2013 Prima sesiune</span>
+                <span class="details"> AC </span>
+                <div class="tic" id="tic423" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=423" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('423')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('423')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+				<div id="wrapper235" class="wrapper">
+		<div class="box" id="box235" onclick="togglePopBox('235')">
+                <span class="prof"><b> profesor:</b> </span> Daniel Merezeanu <br/>
+                <span class="materie"><b> materie: </b></span> Transmisii de Date <br/>
+                <span class="data"><b>data:</b></span> 2011-10-13<br/>
+                <span class="details"> 2010 Prima sesiune</span>
+                <span class="details"> AA/AB/AC </span>
+                <div class="tic" id="tic235" style="display:none;"></div>
+				<div class="buttonHolder">		
+										<a href="http://exams.ro/s.php?s=235" class="show" target="_blank"></a>
+					<input type="button" onclick="cloneBox('235')" class="clone"/>   
+					<input type="button" onclick="cloneBoxClose('235')" class="cloneClose" style="display:none"/>
+				</div>
+        </div>
+        </div>
+                <div style="clear:both"></div></div>
+		<script type="text/javascript">
+	$(document).ready(function() {
+	$('.box').hover(function(){
+				$(this).children('.tic').css({'background-position':'0px -231px'});
+				$(this).children('.buttonHolder').show();
+				$(this).children('.buttonHolder').children('.show').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.clone').click(function(e){e.stopPropagation();});
+				$(this).children('.buttonHolder').children('.cloneClose').click(function(e){e.stopPropagation();});
+				},function(){
+				$(this).children('.buttonHolder').hide();
+				$(this).children('.tic').css({'background-position':'0px -198px'});
+				});
+	});
+		$('.show').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.clone').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.cloneClose').hover(function(){$(this).parent().parent().css({'opacity':'1'});},function(){$(this).parent().parent().css({'opacity':'0.8'});});
+	$('.box').hover(function(){$(this).css({'opacity':'0.8'});},function(){$(this).css({'opacity':'1'});});
+	</script>
+
+

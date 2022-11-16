@@ -1,0 +1,24 @@
+                   
+                        <fieldset>
+                        <label for='materie'>materie</label>
+                        <select name='materie' id='materie'> <option value='Calcul cluster si grid'> Calcul cluster si grid </option>  <option value='Cloud Computing'> Cloud Computing </option>  <option value='Curs avansat de ingineria programelor (CAIP)'> Curs avansat de ingineria programelor (CAIP) </option>  <option value='E-Guvernare'> E-Guvernare </option>  <option value='Fundamentele Stiintei Serviciului'> Fundamentele Stiintei Serviciului </option>  <option value='High Performance Computing in SIM'> High Performance Computing in SIM </option>  <option value='Protocoale de securitate (SAS)'> Protocoale de securitate (SAS) </option>  <option value='Sisteme Adaptive si Colaborative'> Sisteme Adaptive si Colaborative </option>  <option value='Sisteme Avansate de Analiza si Prelucrearea Imaginilor'> Sisteme Avansate de Analiza si Prelucrearea Imaginilor </option> </select> </fieldset><script>
+                             $('select#materie').selectmenu(
+                             { 
+                                width: 200,
+								maxHeight: 250,
+				select: function(event, options) {
+                                        $('#boxresult').hide('fast');
+                                        $('#boxresult').html("<img src='images/ui-anim_basic_16x16-3.gif' width='16' height='16' alt='' />");
+                                        $('#boxresult').show('fast');
+					$.ajax({ 
+						data: 'tags='+options.value+'&id=16',
+						type: 'GET',
+						url: 'scripts/menu_result.php',
+						success: function(value) {
+							$('#boxresult').html(value);
+						}
+					});
+				}
+                             }
+                             );
+                             </script>

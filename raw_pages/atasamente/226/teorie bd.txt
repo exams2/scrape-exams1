@@ -1,0 +1,17 @@
+Teorie:
+
+2. Creare si manipulari constrangeri la BD
+3. Indecsi multinivel cu arbori B si B+
+4. Particularitati ale bd distribuite
+5. View. Definire si modificare
+6. Arhitecturi WEB
+7. Diagrama entitate - relatie
+
+8. componentele DBMS (curs 1 pc, curs 3 foi)
+
+9. Relatii binare in algebra relationala
+10. Comparatie intre indecsi
+11. Dependente functionale,forme normale, normalizare BD
+12. operatii unare
+13. Operatia algebrei relationale PROJECT
+14. Operatia algebrei relationale JOIN

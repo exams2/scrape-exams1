@@ -1,0 +1,75 @@
+Varianta C -APD
+
+Subiectul 1: Algoritmi unda
+1.1 Prezentare generala, scheme de transmitere a mesajelor
+1.2 Algoritmii inel si arbore - pseudocod
+1.3 Era o imagine cu un arbore si trebuia descrisa functionarea algoritmului arbore pe el
+
+Subiectul 2: De scris un algoritm in O(n) pentru rezolvarea unui sistem de forma:
+a1,1*x1=b1
+a2,1*x1+a2,2*x2=b2
+...........
+an,2*x1+...+an,n*xn=bn
+Topologie liniara cu n procese. In final fiecare proces i trebuie sa cunoasca xi.
+
+Subiectul 3: La alegere intre:
+3.1 Mesaje de sondaj cu ecou (ce am avut la tema4). pseudocod pentru varianta arbore si varianta generala
+3.2 Ceva cu ceasuri logice 
+
+
+Varianta D -APD
+
+Subiectul 1: Generalii bizantini
+1. De prezentat problema in general . Conditiile de consistenta
+interactiva
+2. Solutia cu mesaje orale. Descriere solutie. pseudocod. (mai era
+ceva). de enuntat teorema care demonstreaza corectitudinea solutiei
+3. Pe un exemplu cu 5 generali , dintre care 2 tradatori locotenenti,
+sa faci schema cu comenziile si sa spui daca se putea lua o decizie
+sau nu
+
+Subiectul 2: De scris un algoritm (pseudocod) in O(n) pentru
+rezolvarea unui sistem de forma:
+a1,1*x1=b1
+a2,1*x1+a2,2*x2=b2
+...........
+an,2*x1+...+an,n*xn=bn
+Topologie liniara cu n procese. In final fiecare proces i trebuie sa
+cunoasca xi.
+
+Subiectul 3: La alegere dintre:
+1) Producator - Consumator
+de prezentat problema in mod general, si cum o rezolvi
+de scris pseudocod pentru un producator si un consumator cu buffer
+limitat
+de scris pseudocod pentru mai multi producatori si mai multi
+consumatori cu buffer limitat
+sa discuti diferenta intre cele doua pseudocoduri, in privinta
+sincronizarii conditionate
+2) Alegerea liderului
+de prezentat problema in sine
+de prezentat algoritmii de alegere a liderului Tree si Lelann-Chang-
+Robert, pseudocod, cum functioneaza, si complexitate
+(si mai era cred inca o cerinta) 
+
+
+
+ Varianta D -APD
+
+> Subiectul 2: De scris un algoritm (pseudocod) in O(n) pentru
+> rezolvarea unui sistem de forma:
+> a1,1*x1=b1
+> a2,1*x1+a2,2*x2=b2
+> ...........
+> an,2*x1+...+an,n*xn=bn
+> Topologie liniara cu n procese. In final fiecare proces i trebuie sa
+> cunoasca xi.
+
+Aici am avut problema mariajului stabil: Sunt n barbati si n femei. Fiecare
+barbat califica pe fiecare femeie cu un numar de la 1 la n si viceversa. Un
+barbat bi cere o femeie de nevasta si ea accepta propunerea, daca nu a venit
+in prealabil de la un alt barbat bj caruia i-a dat o valoare mai mare la
+inceput. Femeia poate accepta o propunere si apoi sa accepte una mai
+avantajoasa pentru ea (deci sa paraseasca barbatul ales inainte). Mariajul
+va fi stabil, daca se vor forma toate cele n perechi. Se folosesc mesaje
+asincrone intre procese. 

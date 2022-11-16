@@ -1,0 +1,6 @@
+1. sa stii sa scoti functia de transfer a unui sistem definit printr-o ec diferentiala
+2. sa stii principiile de stabilitate ( vezi hurwitz, poli, BIBO)
+3. sa stii sa aflii transformata Laplace a unei functii de timp si invers
+4. sa stii Bode si Nyquist( primesti garantat la lucrare, daca ai facut pana acum)
+5. sa stii sa demonstrezi ca un sistem este liniar,invariant in timp,sau cauzal
+6. si Fourier daca ai facut
