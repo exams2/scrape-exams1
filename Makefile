@@ -56,4 +56,5 @@ raw_pages/atasamente-gata: data/atasamente.txt
 	echo "ok" > raw_pages/atasamente-gata
 
 index.html: raw_pages/atasamente-gata
+	bash delete-empty-not-found.sh
 	./make-index.sh > index.html
